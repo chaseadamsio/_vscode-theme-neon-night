@@ -1,0 +1,25 @@
+{
+  "name": "neon-night",
+  "displayName": "Neon Night",
+  "description": "Dark VS Code Theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "scripts": {
+    "build": "node src/index.js",
+    "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Neon Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neon-night-theme.json"
+      }
+    ]
+  }
+}
