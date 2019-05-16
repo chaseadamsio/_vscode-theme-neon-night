@@ -1,254 +1,41 @@
-const sidebarColors = require("./colors/sidebar");
-const baseColors = require("./colors/base");
-const textColors = require("./colors/text");
-const buttonColors = require("./colors/button");
-const dropdownColors = require("./colors/dropdown");
-const inputColors = require("./colors/input");
-const scrollbarColors = require("./colors/scrollbar");
-const badgeColors = require("./colors/badge");
-const progressBarColors = require("./colors/progress-bar");
-
-const generateTheme = (
-  themeName,
-  {
-    black,
-    blacklight,
-    blackout,
-    white,
-    white77,
-    white33,
-    cyan,
-    blue,
-    blue77,
-    blue33,
-    magenta,
-    magenta22,
-    magenta77,
-    magenta33,
-    magentaMuted,
-    red,
-    green,
-    green77,
-    green33,
-    yellow
-  }
-) => ({
+const generateTheme = (themeName, colors) => ({
   name: "Neon Night",
   type: "dark",
   colors: {
-    ...sidebarColors({ magenta33, magenta, black, white }),
-    ...baseColors({ white, magenta33, magenta77, black, red }),
-    ...textColors({ red, black, white, magenta }),
-    ...buttonColors({ cyan, blue, black }),
-    ...dropdownColors({ blackout, magenta33, white }),
-    ...inputColors({ blackout, white, white77, magenta }),
-    ...scrollbarColors({ magenta, magenta33, magenta77 }),
-    ...badgeColors({ magenta, black }),
-    ...progressBarColors({ magenta }),
-    "editor.background": black,
-    "editor.foreground": white,
-    "editor.hoverHighlightBackground": blackout,
-    "editorWidget.background": black,
-    "editorWidget.border": magenta33,
-    "editorMarkerNavigation.background": black,
-    "editorMarkerNavigationError.background": red,
-    "editorMarkerNavigationWarning.background": yellow,
-    "editorMarkerNavigationInfo.background": blue,
-    "merge.currentHeaderBackground": green77,
-    "merge.currentContentBackground": green33,
-    "merge.incomingHeaderBackground": blue77,
-    "merge.incomingContentBackground": blue33,
-    "merge.commonContentBackground": black,
-    "merge.commonHeaderBackground": black,
-    "editorSuggestWidget.background": black,
-    "editorSuggestWidget.foreground": white,
-    "editorSuggestWidget.highlightForeground": magenta,
-    "editorSuggestWidget.selectedBackground": black,
-    "menubar.selectionForeground": magenta,
-    "menubar.selectionBackground": black,
-    "menu.foreground": white,
-    "menu.background": black,
-
-    "pickerGroup.foreground": white,
-    "list.highlightForeground": magenta,
-
-    "menu.selectionBorder": magenta,
-    "notificationCenter.border": magenta77,
-    "notificationCenterHeader.foreground": magenta,
-    "notificationCenterHeader.background": black,
-    "notificationToast.border": magenta77,
-    "notifications.foreground": white,
-    "notifications.background": black,
-    "notificationLink.foreground": blue,
-    "activityBar.background": black,
-    "activityBarBadge.background": white,
-    "activityBarBadge.foreground": black,
-    "activityBar.foreground": magenta,
-    "activityBar.inactiveForeground": white77,
-    "editorGroupHeader.tabsBackground": black,
-    "editorGutter.background": black,
-    "editorGutter.addedBackground": green,
-    "editorGutter.modifiedBackground": magenta,
-    "editorGutter.deletedBackground": red,
-    "list.inactiveSelectionBackground": magenta33,
-    "list.inactiveSelectionForeground": white,
-    "list.activeSelectionBackground": magenta33,
-    "list.activeSelectionForeground": white,
-    "editorGroup.emptyBackground": black,
-    "editorLineNumber.foreground": white77,
-    "editorLineNumber.activeForeground": white,
-    "scrollbar.shadow": black,
-    "statusBar.background": black,
-    "statusBar.foreground": white77,
-    "breadcrumb.foreground": white,
-    "breadcrumb.background": black,
-    "breadcrumbPicker.background": black,
-    "breadcrumb.focusForeground": magenta,
-    "breadcrumb.activeSelectionForeground": magenta,
-    "gitDecoration.addedResourceForeground": green,
-    "diffEditor.insertedTextBackground": `${green}11`,
-    "diffEditor.removedTextBackground": `${red}11`,
-    "diffEditor.border": magenta77,
-    "gitDecoration.modifiedResourceForeground": magenta,
-    "gitDecoration.deletedResourceForeground": red,
-    "editor.rangeHighlightBackground": magenta33,
-    "editorCodeLens.foreground": magenta,
-    "editor.selectionBackground": magenta22,
-    "panel.background": black,
-    "panel.border": magenta33,
-    "editorIndentGuide.background": white33,
-    "editorIndentGuide.activeBackground": magenta77,
-    "editorRuler.foreground": magenta33,
-    "editorOverviewRuler.border": magenta33,
-    "editorOverviewRuler.findMatchForeground": magenta77,
-    "editor.selectionHighlightBackground": magenta33,
-    "panelTitle.activeForeground": white,
-    "editorOverviewRuler.addedForeground": green,
-    "panelTitle.activeBorder": magenta77,
-    "editorOverviewRuler.modifiedForeground": magenta,
-    "editorOverviewRuler.warningForeground": yellow,
-    "editorOverviewRuler.infoForeground": blue77,
-    "editorOverviewRuler.deletedForeground": red,
-    "editorOverviewRuler.errorForeground": red,
-    "editor.selectionHighlightBorder": magenta77,
-    "panelTitle.inactiveForeground": white77,
-    "editorOverviewRuler.bracketMatchForeground": magenta,
-    "editorError.foreground": red,
-    "editorWarning.foreground": yellow,
-    "editorInfo.foreground": blue,
-    "editorHint.foreground": magenta,
-    "editorUnnecessaryCode.border": red,
-    "editor.wordHighlightBackground": magenta33,
-    "editor.wordHighlightStrongBackground": magenta33,
-    "editor.wordHighlightBorder": magenta77,
-    "list.focusBackground": blacklight,
-    "list.focusForeground": white,
-    "statusBar.noFolderBackground": black,
-    "statusBar.noFolderForeground": white,
-    "statusBar.debuggingBorder": red,
-    "debugToolBar.background": red,
-    "settings.headerForeground": white,
-    "settings.modifiedItemIndicator": magenta,
-    "settings.dropdownBackground": black,
-    "settings.dropdownForeground": white,
-    "settings.dropdownBorder": magenta33,
-    "settings.checkboxBackground": black,
-    "settings.checkboxForeground": white,
-    "settings.checkboxBorder": magenta33,
-    "settings.textInputBackground": black,
-    "settings.textInputForeground": white,
-    "settings.textInputBorder": magenta33,
-    "settings.numberInputBackground": black,
-    "settings.numberInputForeground": white,
-    "settings.numberInputBorder": magenta33,
-    "statusBar.debuggingForeground": black,
-    "editorBracketMatch.background": black,
-    "editor.findMatchHighlightBackground": magenta33,
-    "list.hoverBackground": blacklight,
-    "list.hoverForeground": magenta,
-    "editor.findRangeHighlightBackground": magenta33,
-    "editorBracketMatch.border": magenta77,
-    "editor.findMatchBackground": magenta33,
-    "peekViewEditorGutter.background": black,
-    "peekViewTitle.background": black,
-    "peekViewTitleDescription.foreground": white,
-    "peekViewTitleLabel.foreground": magenta,
-    "peekViewResult.background": black,
-    "peekViewResult.matchHighlightBackground": magenta33,
-    "peekViewResult.fileForeground": white,
-    "peekViewResult.lineForeground": white77,
-    "peekViewResult.selectionBackground": magenta33,
-    "peekViewResult.selectionForeground": white,
-    "peekViewEditor.matchHighlightBackground": magenta33,
-    "peekViewEditor.matchHighlightBorder": black,
-    "peekViewResult.background": black,
-    "tab.activeBackground": black,
-    "tab.activeForeground": white,
-    "peekView.border": magenta33,
-    "peekViewEditor.background": black,
-    "textPreformat.foreground": magenta,
-    "tab.border": magenta33,
-    "tab.activeBorder": magenta,
-    "tab.inactiveBackground": black,
-    "tab.inactiveForeground": white77,
-    "terminal.background": black,
-    "terminal.foreground": white,
-    "terminal.ansiBlack": black,
-    "terminal.ansiBlue": blue,
-    "terminal.ansiRed": red,
-    "terminal.ansiGreen": green,
-    "terminal.ansiYellow": yellow,
-    "terminal.ansiMagenta": magenta,
-    "terminal.ansiCyan": cyan,
-    "terminal.ansiWhite": white,
-    "titleBar.activeBackground": black,
-    "titleBar.activeForeground": white,
-    "titleBar.inactiveForeground": white77
+    ...require("./colors/sidebar")(colors),
+    ...require("./colors/base")(colors),
+    ...require("./colors/text")(colors),
+    ...require("./colors/button")(colors),
+    ...require("./colors/dropdown")(colors),
+    ...require("./colors/input")(colors),
+    ...require("./colors/scrollbar")(colors),
+    ...require("./colors/badge")(colors),
+    ...require("./colors/progress-bar")(colors),
+    ...require("./colors/list")(colors),
+    ...require("./colors/activity-bar")(colors),
+    ...require("./colors/editor-groups-tabs")(colors),
+    ...require("./colors/editor")(colors),
+    ...require("./colors/diff-editor")(colors),
+    ...require("./colors/editor-widget")(colors),
+    ...require("./colors/peek-view")(colors),
+    ...require("./colors/merge-conflicts")(colors),
+    ...require("./colors/panel")(colors),
+    ...require("./colors/status-bar")(colors),
+    ...require("./colors/title-bar")(colors),
+    ...require("./colors/menu-bar")(colors),
+    ...require("./colors/notification")(colors),
+    ...require("./colors/quick-picker")(colors),
+    ...require("./colors/integrated-terminal")(colors),
+    ...require("./colors/debug")(colors),
+    ...require("./colors/git")(colors),
+    ...require("./colors/breadcrumbs")(colors)
   },
   tokenColors: [
-    {
-      name: "Comment",
-      scope: ["comment", "punctuation.definition.comment"],
-      settings: {
-        fontStyle: "italic",
-        foreground: magenta77
-      }
-    },
-    {
-      name: "Variables",
-      scope: ["variable", "string constant.other.placeholder"],
-      settings: {
-        foreground: cyan
-      }
-    },
-    {
-      name: "Colors",
-      scope: ["constant.other.color"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Invalid",
-      scope: ["invalid", "invalid.illegal"],
-      settings: {
-        foreground: red
-      }
-    },
-    {
-      name: "Keyword, Storage",
-      scope: ["keyword", "storage.type", "storage.modifier"],
-      settings: {
-        foreground: magenta
-      }
-    },
-    {
-      name: "Punctuation",
-      scope: "string.quoted punctuation",
-      settings: {
-        foreground: green
-      }
-    },
+    ...require("./token-colors/base")(colors),
+    ...require("./token-colors/markdown")(colors),
+    ...require("./token-colors/json")(colors),
+    ...require("./token-colors/clojure")(colors),
+    ...require("./token-colors/go")(colors),
     {
       name: "Operator, Misc",
       scope: [
@@ -264,7 +51,7 @@ const generateTheme = (
         "keyword.other.substitution"
       ],
       settings: {
-        foreground: white
+        foreground: colors.white
       }
     },
     {
@@ -278,28 +65,22 @@ const generateTheme = (
         "keyword.control"
       ],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
-    {
-      name: "Closure Constant Keyword",
-      scope: "constant.keyword.clojure",
-      settings: {
-        foreground: magenta
-      }
-    },
+
     {
       name: "JS - Import/Require",
       scope: ["keyword.control.module.js"],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
       name: "JS  - Object Property Keys",
       scope: "string.unquoted.js",
       settings: {
-        foreground: white
+        foreground: colors.white
       }
     },
     {
@@ -309,35 +90,29 @@ const generateTheme = (
         "constant.other.object.key.js string.quoted punctuation"
       ],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
       name: "Tag",
       scope: ["meta.tag.sgml", "markup.deleted.git_gutter"],
       settings: {
-        foreground: red
+        foreground: colors.red
       }
     },
-    {
-      name: "Go - Import Name",
-      scope: "entity.name.import.go",
-      settings: {
-        foreground: green
-      }
-    },
+
     {
       name: "Entity Tag",
       scope: "entity.name.tag",
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
       name: "Function Call",
       scope: ["meta.function-call"],
       settings: {
-        foreground: white
+        foreground: colors.white
       }
     },
     {
@@ -349,21 +124,21 @@ const generateTheme = (
         "keyword.other.special-method"
       ],
       settings: {
-        foreground: blue
+        foreground: colors.blue
       }
     },
     {
       name: "Block Level Variables",
       scope: ["meta.block variable.other"],
       settings: {
-        foreground: white
+        foreground: colors.white
       }
     },
     {
       name: "Other Variable, String Link",
       scope: ["support.other.variable", "string.other.link"],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
@@ -379,7 +154,7 @@ const generateTheme = (
         "keyword.other"
       ],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
@@ -395,7 +170,7 @@ const generateTheme = (
         "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
       ],
       settings: {
-        foreground: green
+        foreground: colors.green
       }
     },
     {
@@ -411,14 +186,14 @@ const generateTheme = (
         "support.type.sys-types"
       ],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
       name: "Entity Types",
       scope: ["support.type"],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
@@ -432,7 +207,7 @@ const generateTheme = (
         "source.postcss support.type.property-name"
       ],
       settings: {
-        foreground: blue
+        foreground: colors.blue
       }
     },
     {
@@ -443,7 +218,7 @@ const generateTheme = (
         "variable.other.class.js"
       ],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
@@ -451,7 +226,7 @@ const generateTheme = (
       scope: ["variable.language"],
       settings: {
         fontStyle: "bold",
-        foreground: white
+        foreground: colors.white
       }
     },
     {
@@ -459,7 +234,7 @@ const generateTheme = (
       scope: ["entity.name.method.js"],
       settings: {
         fontStyle: "italic",
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
@@ -469,7 +244,7 @@ const generateTheme = (
         "variable.function.constructor"
       ],
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     },
     {
@@ -568,214 +343,10 @@ const generateTheme = (
       }
     },
     {
-      name: "[VSCODE-CUSTOM] JSON Property Name",
-      scope: [
-        "support.type.property-name.json",
-        "punctuation.support.type.property-name"
-      ],
-      settings: {
-        foreground: magenta,
-        fontStyle: "italic"
-      }
-    },
-    {
-      name: "[VSCODE-CUSTOM] JSON constants",
-      scope: "constant.language.json",
-      settings: {
-        foreground: white,
-        fontStyle: "italic"
-      }
-    },
-    {
-      name: "[VSCODE-CUSTOM] JSON Property Value",
-      scope: [
-        "string.quoted.double.json",
-        "string.quoted.double.json punctuation"
-      ],
-      settings: {
-        foreground: green
-      }
-    },
-    {
-      name: "[JSONNET] JSON String Double Quoted",
-      scope: "string.quoted.double.jsonnet",
-      settings: {
-        foreground: magenta
-      }
-    },
-    {
-      name: "Markdown - Plain",
-      scope: [
-        "text.html.markdown",
-        "punctuation.definition.list_item.markdown"
-      ],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Markup Raw Inline",
-      scope: ["text.html.markdown markup.inline.raw.markdown"],
-      settings: {
-        foreground: magenta
-      }
-    },
-    {
-      name: "Markdown - Markup Raw Inline Punctuation",
-      scope: [
-        "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
-      ],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Heading",
-      scope: "markup.heading",
-      settings: {
-        foreground: magenta
-      }
-    },
-    {
-      name: "Markup - Italic",
-      scope: ["markup.italic"],
-      settings: {
-        fontStyle: "italic",
-        foreground: white
-      }
-    },
-    {
-      name: "Markup - Bold",
-      scope: ["markup.bold", "markup.bold string"],
-      settings: {
-        fontStyle: "bold",
-        foreground: white
-      }
-    },
-    {
-      name: "Boolean",
-      scope: "constant.language.boolean",
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markup - Bold-Italic",
-      scope: [
-        "markup.bold markup.italic",
-        "markup.italic markup.bold",
-        "markup.quote markup.bold",
-        "markup.bold markup.italic string",
-        "markup.italic markup.bold string",
-        "markup.quote markup.bold string"
-      ],
-      settings: {
-        fontStyle: "bold",
-        foreground: white
-      }
-    },
-    {
-      name: "Markup - Underline",
-      scope: ["markup.underline"],
-      settings: {
-        fontStyle: "underline",
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Blockquote",
-      scope: ["markup.quote punctuation.definition.blockquote.markdown"],
-      settings: {
-        foreground: magenta
-      }
-    },
-    {
-      name: "Markup - Quote",
-      scope: ["markup.quote"],
-      settings: {
-        fontStyle: "italic"
-      }
-    },
-    {
-      name: "Markdown - Link",
-      scope: ["string.other.link.title.markdown"],
-      settings: {
-        foreground: blue
-      }
-    },
-    {
-      name: "Markdown - Link Description",
-      scope: ["string.other.link.description.title.markdown"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Link Anchor",
-      scope: ["constant.other.reference.link.markdown"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markup - Raw Block",
-      scope: ["markup.raw.block"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Raw Block Fenced",
-      scope: ["markup.raw.block.fenced.markdown"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Fenced Bode Block",
-      scope: ["punctuation.definition.fenced.markdown"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Fenced Bode Block Variable",
-      scope: [
-        "markup.raw.block.fenced.markdown",
-        "variable.language.fenced.markdown",
-        "punctuation.section.class.end"
-      ],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Fenced Language",
-      scope: ["variable.language.fenced.markdown"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
-      name: "Markdown - Separator",
-      scope: ["meta.separator"],
-      settings: {
-        fontStyle: "bold",
-        foreground: white
-      }
-    },
-    {
-      name: "Markup - Table",
-      scope: ["markup.table"],
-      settings: {
-        foreground: white
-      }
-    },
-    {
       name: "Makefile - Target Name",
       scope: "entity.name.function.target.makefile",
       settings: {
-        foreground: magenta
+        foreground: colors.magenta
       }
     }
   ]

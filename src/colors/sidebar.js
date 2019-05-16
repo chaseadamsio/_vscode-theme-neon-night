@@ -1,3 +1,4 @@
+// https://code.visualstudio.com/api/references/theme-color#side-bar
 const sidebarColors = colors => ({
   "sideBarTitle.foreground": colors.magenta,
   "sideBarSectionHeader.border": colors.magenta33,
