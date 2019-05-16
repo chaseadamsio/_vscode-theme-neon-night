@@ -1,3 +1,13 @@
+const sidebarColors = require("./colors/sidebar");
+const baseColors = require("./colors/base");
+const textColors = require("./colors/text");
+const buttonColors = require("./colors/button");
+const dropdownColors = require("./colors/dropdown");
+const inputColors = require("./colors/input");
+const scrollbarColors = require("./colors/scrollbar");
+const badgeColors = require("./colors/badge");
+const progressBarColors = require("./colors/progress-bar");
+
 const generateTheme = (
   themeName,
   {
@@ -26,18 +36,18 @@ const generateTheme = (
   name: "Neon Night",
   type: "dark",
   colors: {
-    backgorund: black,
-    foreground: white,
-    "widget.shadow": black,
-    "selection.background": magenta33,
-    descriptionForeground: white,
+    ...sidebarColors({ magenta33, magenta, black, white }),
+    ...baseColors({ white, magenta33, magenta77, black, red }),
+    ...textColors({ red, black, white, magenta }),
+    ...buttonColors({ cyan, blue, black }),
+    ...dropdownColors({ blackout, magenta33, white }),
+    ...inputColors({ blackout, white, white77, magenta }),
+    ...scrollbarColors({ magenta, magenta33, magenta77 }),
+    ...badgeColors({ magenta, black }),
+    ...progressBarColors({ magenta }),
     "editor.background": black,
     "editor.foreground": white,
     "editor.hoverHighlightBackground": blackout,
-    "dropdown.background": blackout,
-    "dropdown.listBackground": blackout,
-    "dropdown.border": magenta33,
-    "dropdown.foreground": white,
     "editorWidget.background": black,
     "editorWidget.border": magenta33,
     "editorMarkerNavigation.background": black,
@@ -71,47 +81,25 @@ const generateTheme = (
     "notifications.background": black,
     "notificationLink.foreground": blue,
     "activityBar.background": black,
-    errorForeground: red,
-    "button.background": blue,
-    "button.foreground": white,
-    "textBlockQuote.background": red,
     "activityBarBadge.background": white,
     "activityBarBadge.foreground": black,
     "activityBar.foreground": magenta,
     "activityBar.inactiveForeground": white77,
-    "scrollbarSlider.activeBackground": magenta,
-    "scrollbarSlider.background": magenta33,
-    "scrollbarSlider.hoverBackground": magenta77,
     "editorGroupHeader.tabsBackground": black,
     "editorGutter.background": black,
     "editorGutter.addedBackground": green,
     "editorGutter.modifiedBackground": magenta,
     "editorGutter.deletedBackground": red,
-    "badge.foreground": magenta,
-    "progressBar.background": magenta,
-    "badge.background": black,
     "list.inactiveSelectionBackground": magenta33,
     "list.inactiveSelectionForeground": white,
     "list.activeSelectionBackground": magenta33,
     "list.activeSelectionForeground": white,
-    "sideBarTitle.foreground": magenta,
-    "sideBarSectionHeader.border": magenta33,
     "editorGroup.emptyBackground": black,
-    "sideBarSectionHeader.background": black,
-    "sideBarSectionHeader.foreground": magenta,
     "editorLineNumber.foreground": white77,
-    "sideBar.border": magenta33,
     "editorLineNumber.activeForeground": white,
-    foreground: white,
-    focusBorder: magenta77,
-    "input.placeholderForeground": white77,
     "scrollbar.shadow": black,
-    "input.background": blackout,
-    "input.foreground": white,
-    "inputOption.activeBorder": magenta,
     "statusBar.background": black,
     "statusBar.foreground": white77,
-    "sideBar.background": black,
     "breadcrumb.foreground": white,
     "breadcrumb.background": black,
     "breadcrumbPicker.background": black,
@@ -123,7 +111,6 @@ const generateTheme = (
     "diffEditor.border": magenta77,
     "gitDecoration.modifiedResourceForeground": magenta,
     "gitDecoration.deletedResourceForeground": red,
-    "sideBarTitle.foreground": white,
     "editor.rangeHighlightBackground": magenta33,
     "editorCodeLens.foreground": magenta,
     "editor.selectionBackground": magenta22,
@@ -199,7 +186,6 @@ const generateTheme = (
     "tab.activeForeground": white,
     "peekView.border": magenta33,
     "peekViewEditor.background": black,
-    "textCodeBlock.background": black,
     "textPreformat.foreground": magenta,
     "tab.border": magenta33,
     "tab.activeBorder": magenta,
@@ -215,9 +201,6 @@ const generateTheme = (
     "terminal.ansiMagenta": magenta,
     "terminal.ansiCyan": cyan,
     "terminal.ansiWhite": white,
-    "textLink.foreground": magenta,
-    "textLink.activeForeground": magenta,
-    "textPreformat.foreground": white,
     "titleBar.activeBackground": black,
     "titleBar.activeForeground": white,
     "titleBar.inactiveForeground": white77
@@ -269,7 +252,6 @@ const generateTheme = (
     {
       name: "Operator, Misc",
       scope: [
-        "keyword.control",
         "constant.other.color",
         "meta.tag",
         "punctuation.definition.tag",
@@ -283,6 +265,27 @@ const generateTheme = (
       ],
       settings: {
         foreground: white
+      }
+    },
+    {
+      name:
+        "Support Constant, `new` keyword, Special Method Keyword, `debugger`, other keywords",
+      scope: [
+        "support.constant",
+        "keyword.other.special-method",
+        "keyword.other.new",
+        "keyword.other.debugger",
+        "keyword.control"
+      ],
+      settings: {
+        foreground: magenta
+      }
+    },
+    {
+      name: "Closure Constant Keyword",
+      scope: "constant.keyword.clojure",
+      settings: {
+        foreground: magenta
       }
     },
     {
@@ -311,9 +314,23 @@ const generateTheme = (
     },
     {
       name: "Tag",
-      scope: ["entity.name.tag", "meta.tag.sgml", "markup.deleted.git_gutter"],
+      scope: ["meta.tag.sgml", "markup.deleted.git_gutter"],
       settings: {
         foreground: red
+      }
+    },
+    {
+      name: "Go - Import Name",
+      scope: "entity.name.import.go",
+      settings: {
+        foreground: green
+      }
+    },
+    {
+      name: "Entity Tag",
+      scope: "entity.name.tag",
+      settings: {
+        foreground: magenta
       }
     },
     {
@@ -415,7 +432,7 @@ const generateTheme = (
         "source.postcss support.type.property-name"
       ],
       settings: {
-        foreground: "#B2CCD6"
+        foreground: blue
       }
     },
     {
@@ -426,15 +443,15 @@ const generateTheme = (
         "variable.other.class.js"
       ],
       settings: {
-        foreground: "#FF5370"
+        foreground: magenta
       }
     },
     {
       name: "Language methods",
       scope: ["variable.language"],
       settings: {
-        fontStyle: "italic",
-        foreground: "#FF5370"
+        fontStyle: "bold",
+        foreground: white
       }
     },
     {
