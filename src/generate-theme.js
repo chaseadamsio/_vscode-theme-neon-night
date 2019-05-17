@@ -39,7 +39,8 @@ const generateTheme = (themeName, colors) => ({
     ...require("./token-colors/javascript")(colors),
     ...require("./token-colors/css")(colors),
     ...require("./token-colors/makefile")(colors),
-    ...require("./token-colors/html")(colors)
+    ...require("./token-colors/html")(colors),
+    ...require("./token-colors/docker")(colors)
   ]
 });
 

@@ -93,14 +93,14 @@ const base = colors => [
     name: "Regular Expressions",
     scope: ["string.regexp"],
     settings: {
-      foreground: "#89DDFF"
+      foreground: colors.blue
     }
   },
   {
     name: "Escape Characters",
     scope: ["constant.character.escape"],
     settings: {
-      foreground: "#89DDFF"
+      foreground: colors.magenta
     }
   },
   {

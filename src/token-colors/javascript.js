@@ -1,16 +1,32 @@
 const javascript = colors => [
   {
     name: "JS - Import/Require",
-    scope: ["keyword.control.module.js"],
+    scope: "source.js keyword.control.module",
     settings: {
       foreground: colors.magenta
     }
   },
   {
-    name: "JS  - Object Property Keys",
-    scope: "string.unquoted.js",
+    name: "JS - Object Property Keys",
+    scope: "source.js string.unquoted",
     settings: {
       foreground: colors.white
+    }
+  },
+  {
+    name: "JS - Keyword",
+    scope: "source.js keyword.operator.accessor",
+    settings: {
+      foreground: colors.magenta,
+      fontStyle: "normal"
+    }
+  },
+  {
+    name: "JS - Support",
+    scope: "source.js support.type",
+    settings: {
+      foreground: colors.magenta,
+      fontStyle: "normal"
     }
   },
   {

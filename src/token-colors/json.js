@@ -1,38 +1,44 @@
 const json = colors => [
   {
-    name: "[VSCODE-CUSTOM] JSON Property Name",
+    name: "JSON - Property Name",
     scope: [
-      "support.type.property-name.json",
-      "punctuation.support.type.property-name"
+      "source.json support.type.property-name",
+      "source.json punctuation.support.type.property-name"
     ],
     settings: {
-      foreground: colors.magenta,
-      fontStyle: "italic"
+      foreground: colors.magenta
     }
   },
   {
-    name: "[VSCODE-CUSTOM] JSON constants",
-    scope: "constant.language.json",
+    name: "JSON - constants",
+    scope: "source.json constant.language",
     settings: {
       foreground: colors.white,
       fontStyle: "italic"
     }
   },
   {
-    name: "[VSCODE-CUSTOM] JSON Property Value",
+    name: "JSON - Property Value",
     scope: [
-      "string.quoted.double.json",
-      "string.quoted.double.json punctuation"
+      "source.json string.quoted.double",
+      "source.json string.quoted.double punctuation"
     ],
     settings: {
       foreground: colors.green
     }
   },
   {
-    name: "[JSONNET] JSON String Double Quoted",
-    scope: "string.quoted.double.jsonnet",
+    name: "JSONNET - String",
+    scope: "source.jsonnet string.quoted",
     settings: {
       foreground: colors.magenta
+    }
+  },
+  {
+    name: "JSONNET - Function",
+    scope: "source.jsonnet entity.name.function",
+    settings: {
+      foreground: colors.blue
     }
   }
 ];
