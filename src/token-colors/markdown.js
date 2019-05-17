@@ -1,20 +1,5 @@
 const markdown = colors => [
   {
-    name: "Markup - Bold-Italic",
-    scope: [
-      "markup.bold markup.italic",
-      "markup.italic markup.bold",
-      "markup.quote markup.bold",
-      "markup.bold markup.italic string",
-      "markup.italic markup.bold string",
-      "markup.quote markup.bold string"
-    ],
-    settings: {
-      fontStyle: "bold",
-      foreground: colors.white
-    }
-  },
-  {
     name: "Markdown - Plain",
     scope: ["text.html.markdown", "punctuation.definition.list_item.markdown"],
     settings: {
@@ -23,46 +8,44 @@ const markdown = colors => [
   },
   {
     name: "Markdown - Markup Raw Inline",
-    scope: ["text.html.markdown markup.inline.raw.markdown"],
-    settings: {
-      foreground: colors.magenta
-    }
-  },
-  {
-    name: "Markdown - Markup Raw Inline Punctuation",
     scope: [
-      "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
+      "text.html.markdown markup.inline.raw",
+      "text.html.markdown markup.inline.raw punctuation.definition.raw.markdown"
     ],
     settings: {
-      foreground: colors.white
+      foreground: colors.blue,
+      fontStyle: "bold"
     }
   },
   {
     name: "Markdown - Heading",
-    scope: "markup.heading",
+    scope: "text.html.markdown markup.heading",
     settings: {
       foreground: colors.magenta
     }
   },
   {
-    name: "Markup - Italic",
-    scope: ["markup.italic"],
+    name: "Markdown - Italic",
+    scope: ["text.html.markdown markup.italic"],
     settings: {
       fontStyle: "italic",
-      foreground: colors.white
+      foreground: colors.cyan
     }
   },
   {
-    name: "Markup - Bold",
-    scope: ["markup.bold", "markup.bold string"],
+    name: "Markdown - Bold",
+    scope: [
+      "text.html.markdown markup.bold",
+      "text.html.markdown markup.bold string"
+    ],
     settings: {
       fontStyle: "bold",
-      foreground: colors.white
+      foreground: colors.cyan
     }
   },
   {
     name: "Markup - Underline",
-    scope: ["markup.underline"],
+    scope: ["text.html.markdown markup.underline"],
     settings: {
       fontStyle: "underline",
       foreground: colors.white
@@ -70,90 +53,70 @@ const markdown = colors => [
   },
   {
     name: "Markdown - Blockquote",
-    scope: ["markup.quote punctuation.definition.blockquote.markdown"],
+    scope: [
+      "text.html.markdown markup.quote punctuation.definition.blockquote.markdown"
+    ],
     settings: {
       foreground: colors.magenta
     }
   },
   {
-    name: "Markup - Quote",
-    scope: ["markup.quote"],
+    name: "Markdown - Quote",
+    scope: ["text.html.markdown markup.quote"],
     settings: {
-      fontStyle: "italic"
+      fontStyle: "italic",
+      foreground: colors.blue
     }
   },
   {
     name: "Markdown - Link",
-    scope: ["string.other.link.title.markdown"],
+    scope: ["text.html.markdown string.other.link.title.markdown"],
     settings: {
       foreground: colors.blue
     }
   },
   {
     name: "Markdown - Link Description",
-    scope: ["string.other.link.description.title.markdown"],
+    scope: ["text.html.markdown string.other.link.description.title"],
     settings: {
       foreground: colors.white
     }
   },
   {
     name: "Markdown - Link Anchor",
-    scope: ["constant.other.reference.link.markdown"],
+    scope: ["text.html.markdown markup.underline.link"],
     settings: {
-      foreground: colors.white
+      foreground: colors.green
     }
   },
   {
-    name: "Markup - Raw Block",
-    scope: ["markup.raw.block"],
+    name: "Markdown - Raw Block",
+    scope: ["text.html.markdown markup.raw.block"],
     settings: {
       foreground: colors.white
     }
   },
   {
     name: "Markdown - Raw Block Fenced",
-    scope: ["markup.raw.block.fenced.markdown"],
+    scope: ["text.html.markdown markup.raw.block.fenced"],
     settings: {
       foreground: colors.white
     }
   },
   {
     name: "Markdown - Fenced Bode Block",
-    scope: ["punctuation.definition.fenced.markdown"],
-    settings: {
-      foreground: colors.white
-    }
-  },
-  {
-    name: "Markdown - Fenced Bode Block Variable",
     scope: [
-      "markup.raw.block.fenced.markdown",
-      "variable.language.fenced.markdown",
-      "punctuation.section.class.end"
+      "text.html.markdown markup.fenced_code.block punctuation.definition"
     ],
     settings: {
-      foreground: colors.white
-    }
-  },
-  {
-    name: "Markdown - Fenced Language",
-    scope: ["variable.language.fenced.markdown"],
-    settings: {
-      foreground: colors.white
+      foreground: colors.blue
     }
   },
   {
     name: "Markdown - Separator",
-    scope: ["meta.separator"],
+    scope: ["text.html markdown meta.separator"],
     settings: {
       fontStyle: "bold",
-      foreground: colors.white
-    }
-  },
-  {
-    name: "Markup - Table",
-    scope: ["markup.table"],
-    settings: {
       foreground: colors.white
     }
   }

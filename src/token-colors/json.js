@@ -10,35 +10,21 @@ const json = colors => [
     }
   },
   {
-    name: "JSON - constants",
+    name: "JSON - Constant",
     scope: "source.json constant.language",
     settings: {
       foreground: colors.white,
-      fontStyle: "italic"
+      fontStyle: "bold"
     }
   },
   {
-    name: "JSON - Property Value",
+    name: "JSON - String",
     scope: [
       "source.json string.quoted.double",
       "source.json string.quoted.double punctuation"
     ],
     settings: {
       foreground: colors.green
-    }
-  },
-  {
-    name: "JSONNET - String",
-    scope: "source.jsonnet string.quoted",
-    settings: {
-      foreground: colors.magenta
-    }
-  },
-  {
-    name: "JSONNET - Function",
-    scope: "source.jsonnet entity.name.function",
-    settings: {
-      foreground: colors.blue
     }
   }
 ];

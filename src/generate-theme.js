@@ -32,15 +32,15 @@ const generateTheme = (themeName, colors) => ({
   },
   tokenColors: [
     ...require("./token-colors/base")(colors),
-    ...require("./token-colors/markdown")(colors),
-    ...require("./token-colors/json")(colors),
     ...require("./token-colors/clojure")(colors),
-    ...require("./token-colors/go")(colors),
-    ...require("./token-colors/javascript")(colors),
     ...require("./token-colors/css")(colors),
-    ...require("./token-colors/makefile")(colors),
+    ...require("./token-colors/docker")(colors),
+    ...require("./token-colors/go")(colors),
     ...require("./token-colors/html")(colors),
-    ...require("./token-colors/docker")(colors)
+    ...require("./token-colors/javascript")(colors),
+    ...require("./token-colors/json")(colors),
+    ...require("./token-colors/makefile")(colors),
+    ...require("./token-colors/markdown")(colors)
   ]
 });
 

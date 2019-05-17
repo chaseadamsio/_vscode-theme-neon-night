@@ -5,7 +5,8 @@ const statusBar = colors => ({
   "statusBar.foreground": colors.white77,
   "statusBar.noFolderBackground": colors.black,
   "statusBar.noFolderForeground": colors.white,
-  "statusBar.debuggingBorder": colors.red,
+  "statusBar.debuggingBackground": colors.magenta,
+  "statusBar.debuggingBorder": colors.blackout,
   "statusBar.debuggingForeground": colors.black
 });
 

@@ -1,6 +1,6 @@
 const base = colors => [
   {
-    name: "Comment",
+    name: "Base - Comment",
     scope: ["comment", "punctuation.definition.comment"],
     settings: {
       fontStyle: "italic",
@@ -8,76 +8,66 @@ const base = colors => [
     }
   },
   {
-    name: "Boolean",
-    scope: "constant.language.boolean",
+    name: "Base - String",
+    scope: ["string.quoted punctuation", "string.quoted"],
     settings: {
-      foreground: colors.white
+      foreground: colors.green
     }
   },
   {
-    name: "Variables",
+    name: "Function",
+    scope: ["entity.name.function"],
+    settings: {
+      foreground: colors.white,
+      fontStyle: "italic"
+    }
+  },
+  {
+    name: "Base - Variable",
     scope: ["variable", "string constant.other.placeholder"],
     settings: {
-      foreground: colors.cyan
+      foreground: colors.blue
     }
   },
   {
-    name: "Colors",
-    scope: ["constant.other.color"],
+    name: "Base - Boolean",
+    scope: "constant.language.boolean",
     settings: {
+      fontStyle: "bold",
       foreground: colors.white
     }
   },
   {
-    name: "Invalid",
+    name: "Base - Invalid",
     scope: ["invalid", "invalid.illegal"],
     settings: {
       foreground: colors.red
     }
   },
   {
-    name: "Keyword, Storage",
-    scope: ["keyword", "storage.type", "storage.modifier"],
+    name: "Base - Keyword",
+    scope: ["keyword"],
+    settings: {
+      foreground: colors.magenta
+    }
+  },
+  {
+    name: "Base - Storage",
+    scope: ["storage.type", "storage.modifier"],
     settings: {
       fontStyle: "italic",
       foreground: colors.magenta
     }
   },
   {
-    name: "String",
-    scope: ["string punctuation", "string.quoted"],
-    settings: {
-      foreground: colors.green
-    }
-  },
-  {
-    name: "Accessor",
+    name: "Base - Accessor",
     scope: "keyword.operator.accessor",
     settings: {
       foreground: colors.white
     }
   },
   {
-    name: "Operator, Misc",
-    scope: [
-      "constant.other.color",
-      "meta.tag",
-      "punctuation.definition.tag",
-      "punctuation.separator.inheritance.php",
-      "punctuation.definition.tag.html",
-      "punctuation.definition.tag.begin.html",
-      "punctuation.definition.tag.end.html",
-      "punctuation.section.embedded",
-      "keyword.other.template",
-      "keyword.other.substitution"
-    ],
-    settings: {
-      foreground: colors.white
-    }
-  },
-  {
-    name:
-      "Support Constant, `new` keyword, Special Method Keyword, `debugger`, other keywords",
+    name: "Base - Keywords (Control/Debugger/Constant)",
     scope: [
       "support.constant",
       "keyword.other.special-method",
@@ -86,32 +76,33 @@ const base = colors => [
       "keyword.control"
     ],
     settings: {
+      fontStyle: "italic",
       foreground: colors.magenta
     }
   },
   {
-    name: "Regular Expressions",
+    name: "Base - Regular Expressions",
     scope: ["string.regexp"],
     settings: {
-      foreground: colors.blue
+      foreground: colors.green
     }
   },
   {
-    name: "Escape Characters",
+    name: "Base - Escape Character",
     scope: ["constant.character.escape"],
     settings: {
       foreground: colors.magenta
     }
   },
   {
-    name: "URL",
+    name: "Base - URL",
     scope: ["*url*", "*link*", "*uri*"],
     settings: {
       fontStyle: "underline"
     }
   },
   {
-    name: "Language methods",
+    name: "Base - Language Variable",
     scope: ["variable.language"],
     settings: {
       fontStyle: "bold",
@@ -119,32 +110,33 @@ const base = colors => [
     }
   },
   {
-    name: "Attributes",
+    name: "Base - Attributes",
     scope: ["entity.other.attribute-name"],
     settings: {
       fontStyle: "italic",
-      foreground: colors.blue
+      foreground: colors.magenta
     }
   },
+  // markup.{inserted,deleted,changed} is a diff block.
   {
-    name: "Inserted",
+    name: "Base - Inserted",
     scope: ["markup.inserted"],
     settings: {
-      foreground: "#C3E88D"
+      foreground: colors.magenta
     }
   },
   {
-    name: "Deleted",
+    name: "Base - Deleted",
     scope: ["markup.deleted"],
     settings: {
-      foreground: "#FF5370"
+      foreground: colors.red
     }
   },
   {
-    name: "Changed",
+    name: "Base - Changed",
     scope: ["markup.changed"],
     settings: {
-      foreground: "#C792EA"
+      foreground: colors.blue
     }
   }
 ];
