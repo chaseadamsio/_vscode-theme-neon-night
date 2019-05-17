@@ -31,6 +31,10 @@ sale.decorate("fedtax");
 sale.decorate("quebec");
 console.log(sale.getPrice()); //112.88
 
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+}
+
 getPrice();
 
 //deeply nested
