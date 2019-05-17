@@ -1,4 +1,7 @@
 "use strict";
+import foo, { baz, qux } from "bar";
+const foo = require("foo");
+
 class Sale {
   constructor(price) {
     [this.decoratorsList, this.price] = [[], price];
@@ -29,6 +32,7 @@ class Sale {
 let sale = new Sale(100);
 sale.decorate("fedtax");
 sale.decorate("quebec");
+const tmpl = `${sale.getPrice()} this is my string!`;
 console.log(sale.getPrice()); //112.88
 
 function escapeRegExp(string) {
@@ -44,6 +48,9 @@ async function asyncCall() {
 }
 
 const options = {
+  "connections-dash": {
+    test: 2
+  },
   connections: {
     compression: false
   }
