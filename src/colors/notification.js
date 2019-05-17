@@ -1,5 +1,5 @@
 // https://code.visualstudio.com/api/references/theme-color#notification-colors
-const notifcation = colors => ({
+const notification = colors => ({
   "notificationCenter.border": colors.magenta77,
   "notificationCenterHeader.foreground": colors.magenta,
   "notificationCenterHeader.background": colors.black,
@@ -9,4 +9,4 @@ const notifcation = colors => ({
   "notificationLink.foreground": colors.blue
 });
 
-module.exports = notifcation;
+module.exports = notification;
