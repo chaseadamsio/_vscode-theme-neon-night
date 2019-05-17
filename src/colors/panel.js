@@ -1,3 +1,4 @@
+// https://code.visualstudio.com/api/references/theme-color#panel-colors
 const panel = colors => ({
   "panel.background": colors.black,
   "panel.border": colors.magenta33,
