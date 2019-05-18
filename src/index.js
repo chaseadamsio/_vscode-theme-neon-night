@@ -1,23 +1,23 @@
 // @flow
-const path = require("path");
-const fs = require("fs");
+const path = require(`path`);
+const fs = require(`fs`);
 
-const generateTheme = require("./generate-theme");
-const pkgJSON = require("./generate-pkg-json");
-const palette = require("./palette");
+const generateTheme = require(`./generate-theme`);
+const pkgJSON = require(`./generate-pkg-json`);
+const palette = require(`./palette`);
 const themeInfo = {
-  name: "neon-night",
-  displayName: "Neon Night"
+  name: `neon-night`,
+  displayName: `Neon Night`
 };
 
 const themePath = path.resolve(
   __dirname,
-  "..",
-  "themes",
+  `..`,
+  `themes`,
   `${themeInfo.name}-theme.json`
 );
 
-const pkgJSONPath = path.resolve(__dirname, "..", "themes", `package.json`);
+const pkgJSONPath = path.resolve(__dirname, `..`, `themes`, `package.json`);
 
 const main = async function(themePath, themeInfo) {
   await fs.writeFileSync(
@@ -31,13 +31,13 @@ const main = async function(themePath, themeInfo) {
       null,
       2
     ),
-    "utf-8"
+    `utf-8`
   );
 
   await fs.writeFileSync(
     pkgJSONPath,
     JSON.stringify(pkgJSON(themeInfo), null, 2),
-    "utf-8"
+    `utf-8`
   );
 };
 

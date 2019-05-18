@@ -1,9 +1,9 @@
+/* eslint-disable */
 "use strict";
 /*
 Javascript comment about something interesting!
 */
 import foo, { baz, qux } from "bar";
-const foo = require("foo");
 
 /* ::
 type Thinger = string;
