@@ -12,6 +12,7 @@
     "build": "node src/index.js",
     "cp:static": "cp LICENSE themes && cp src/favicon-128.png themes/icon.png",
     "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build",
+    "test:check-code": "yarn test:lint && yarn test:flow",
     "test:flow": "flow check",
     "test:lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
     "vscode:prepublish": "yarn build && yarn cp:static",
@@ -23,5 +24,6 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-flowtype": "^3.9.0",
     "flow-bin": "^0.98.1",
+    "prettier": "^1.17.1"
   }
 }
