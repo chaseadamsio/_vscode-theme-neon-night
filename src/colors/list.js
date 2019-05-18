@@ -1,8 +1,9 @@
 // https://code.visualstudio.com/api/references/theme-color#lists-and-trees
 const list = colors => ({
-  "list.hoverBackground": colors.blacklight,
+  "list.hoverBackground": colors.blackest,
+  "list.border": colors.blackest,
   "list.hoverForeground": colors.magenta,
-  "list.focusBackground": colors.blacklight,
+  "list.focusBackground": colors.blackest,
   "list.focusForeground": colors.white,
   "list.highlightForeground": colors.magenta,
   "list.inactiveSelectionBackground": colors.magenta33,

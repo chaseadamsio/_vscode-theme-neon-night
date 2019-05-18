@@ -1,7 +1,7 @@
 // https://code.visualstudio.com/api/references/theme-color#button-control
 const buttonColors = colors => ({
-  "button.background": colors.cyan,
-  "button.hoverBackground": colors.blue,
+  "button.background": colors.blue,
+  "button.hoverBackground": colors.cyan,
   "button.foreground": colors.black
 });
 
