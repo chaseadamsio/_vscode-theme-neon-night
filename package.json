@@ -1,25 +1,18 @@
 {
-  "name": "neon-night",
-  "displayName": "Neon Night",
+  "name": "vscode-theme-neon-night",
   "description": "Dark VS Code Theme",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.33.0"
+  "publisher": "chaseadamsio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chaseadamsio/vscode-theme-neon-night"
   },
+  "version": "0.0.1",
   "scripts": {
     "build": "node src/index.js",
-    "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Neon Night",
-        "uiTheme": "vs-dark",
-        "path": "./themes/neon-night-theme.json"
-      }
-    ]
+    "cp:static": "cp LICENSE themes && cp src/favicon-128.png themes/icon.png",
+    "vscode:prepublish": "yarn build && yarn cp:static",
+    "vscode:publish": "cd themes && vsce",
+    "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build"
   }
 }
