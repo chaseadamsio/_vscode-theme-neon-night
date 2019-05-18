@@ -1,44 +1,34 @@
-const generateTheme = require("./generate-theme");
 const path = require("path");
 const fs = require("fs");
 
-const themeName = "neon-night";
+const generateTheme = require("./generate-theme");
+const pkgJSON = require("./generate-pkg-json");
+const colors = require("./palette");
+const themeInfo = {
+  name: "neon-night"
+};
 
 const themePath = path.resolve(
   __dirname,
   "..",
   "themes",
-  `${themeName}-theme.json`
+  `${themeInfo.name}-theme.json`
 );
 
-const colors = {
-  blackest: "#131417",
-  black: "#20242D",
-  blacklight: "#343740",
-  blackout: "#1E2129",
-  white: "#C7C8FF",
-  white77: "#C7C8FF77",
-  white33: "#C7C8FF33",
-  cyan: "#8ce8ff",
-  blue: "#69B4F9",
-  blue77: "#69B4F977",
-  blue33: "#69B4F933",
-  magenta: "#DD92F6",
-  magenta22: "#DD92F622",
-  magenta33: "#DD92F633",
-  magenta77: "#DD92F677",
-  magentaMuted: "#DD92F633",
-  red: "#FF8E8E",
-  green: "#7efdd0",
-  green77: "#7efdd077",
-  green33: "#7efdd033",
-  yellow: "#FCAD3F"
+const pkgJSONPath = path.resolve(__dirname, "..", "themes", `package.json`);
+
+const main = async function(themePath, themeInfo) {
+  await fs.writeFileSync(
+    themePath,
+    JSON.stringify(generateTheme(themeInfo.name, colors), null, 2),
+    "utf-8"
+  );
+
+  await fs.writeFileSync(
+    pkgJSONPath,
+    JSON.stringify(pkgJSON(themeInfo), null, 2),
+    "utf-8"
+  );
 };
 
-const theme = generateTheme(themeName, colors);
-
-const main = async function(themePath, theme) {
-  await fs.writeFileSync(themePath, JSON.stringify(theme), "utf-8");
-};
-
-main(themePath, theme);
+main(themePath, themeInfo);
