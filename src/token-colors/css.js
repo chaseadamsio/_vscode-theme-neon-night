@@ -1,4 +1,10 @@
-const css = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const css = (palette /*: Palette */) => [
   {
     name: "CSS - ID",
     scope: [
@@ -10,7 +16,7 @@ const css = colors => [
       "source.postcss keyword.control"
     ],
     settings: {
-      foreground: colors.magenta,
+      foreground: palette.magenta,
       fontStyle: "italic"
     }
   },
@@ -24,7 +30,7 @@ const css = colors => [
       "source.postcss entity.name.tag"
     ],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
@@ -37,7 +43,7 @@ const css = colors => [
       "source.postcss support.constant.property-value"
     ],
     settings: {
-      foreground: colors.green
+      foreground: palette.green
     }
   },
   {
@@ -51,7 +57,7 @@ const css = colors => [
       "source.postcss support.type.property-name"
     ],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
@@ -65,7 +71,7 @@ const css = colors => [
       "source.postcss entity.other.attribute-name.class"
     ],
     settings: {
-      foreground: colors.cyan,
+      foreground: palette.cyan,
       fontStyle: "normal"
     }
   },
@@ -80,7 +86,7 @@ const css = colors => [
       "source.postcss support.function"
     ],
     settings: {
-      foreground: colors.blue,
+      foreground: palette.blue,
       fontStyle: "normal"
     }
   }

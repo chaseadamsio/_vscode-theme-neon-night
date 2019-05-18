@@ -11,8 +11,12 @@
   "scripts": {
     "build": "node src/index.js",
     "cp:static": "cp LICENSE themes && cp src/favicon-128.png themes/icon.png",
+    "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build",
+    "test:flow": "flow check",
     "vscode:prepublish": "yarn build && yarn cp:static",
-    "vscode:publish": "cd themes && vsce",
-    "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build"
+    "vscode:publish": "cd themes && vsce"
+  },
+  "dependencies": {
+    "flow-bin": "^0.98.1"
   }
 }

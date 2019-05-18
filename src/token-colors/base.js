@@ -1,24 +1,30 @@
-const base = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const base = (palette /*: Palette */) => [
   {
     name: "Base - Comment",
     scope: ["comment", "punctuation.definition.comment"],
     settings: {
       fontStyle: "italic",
-      foreground: colors.magenta77
+      foreground: palette.magenta77
     }
   },
   {
     name: "Base - String",
     scope: ["string.quoted punctuation", "string.quoted"],
     settings: {
-      foreground: colors.green
+      foreground: palette.green
     }
   },
   {
     name: "Function",
     scope: ["entity.name.function"],
     settings: {
-      foreground: colors.white,
+      foreground: palette.white,
       fontStyle: "italic"
     }
   },
@@ -26,7 +32,7 @@ const base = colors => [
     name: "Base - Variable",
     scope: ["variable", "string constant.other.placeholder"],
     settings: {
-      foreground: colors.blue
+      foreground: palette.blue
     }
   },
   {
@@ -34,21 +40,21 @@ const base = colors => [
     scope: "constant.language.boolean",
     settings: {
       fontStyle: "bold",
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
     name: "Base - Invalid",
     scope: ["invalid", "invalid.illegal"],
     settings: {
-      foreground: colors.red
+      foreground: palette.red
     }
   },
   {
     name: "Base - Keyword",
     scope: ["keyword"],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
@@ -56,14 +62,14 @@ const base = colors => [
     scope: ["storage.type", "storage.modifier"],
     settings: {
       fontStyle: "italic",
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "Base - Accessor",
     scope: "keyword.operator.accessor",
     settings: {
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
@@ -77,21 +83,21 @@ const base = colors => [
     ],
     settings: {
       fontStyle: "italic",
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "Base - Regular Expressions",
     scope: ["string.regexp"],
     settings: {
-      foreground: colors.green
+      foreground: palette.green
     }
   },
   {
     name: "Base - Escape Character",
     scope: ["constant.character.escape"],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
@@ -106,7 +112,7 @@ const base = colors => [
     scope: ["variable.language"],
     settings: {
       fontStyle: "bold",
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
@@ -114,7 +120,7 @@ const base = colors => [
     scope: ["entity.other.attribute-name"],
     settings: {
       fontStyle: "italic",
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   // markup.{inserted,deleted,changed} is a diff block.
@@ -122,21 +128,21 @@ const base = colors => [
     name: "Base - Inserted",
     scope: ["markup.inserted"],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "Base - Deleted",
     scope: ["markup.deleted"],
     settings: {
-      foreground: colors.red
+      foreground: palette.red
     }
   },
   {
     name: "Base - Changed",
     scope: ["markup.changed"],
     settings: {
-      foreground: colors.blue
+      foreground: palette.blue
     }
   }
 ];

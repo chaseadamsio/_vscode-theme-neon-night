@@ -1,10 +1,16 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#menu-bar-colors
-const menu = colors => ({
-  "menubar.selectionForeground": colors.magenta,
-  "menubar.selectionBackground": colors.black,
-  "menu.foreground": colors.white,
-  "menu.background": colors.black,
-  "menu.selectionBorder": colors.magenta
+const menu = (palette /*: Palette */) => ({
+  "menubar.selectionForeground": palette.magenta,
+  "menubar.selectionBackground": palette.black,
+  "menu.foreground": palette.white,
+  "menu.background": palette.black,
+  "menu.selectionBorder": palette.magenta
 });
 
 module.exports = menu;

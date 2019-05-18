@@ -1,12 +1,18 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#side-bar
-const sidebarColors = colors => ({
-  "sideBarTitle.foreground": colors.magenta,
-  "sideBarSectionHeader.border": colors.magenta33,
-  "sideBarSectionHeader.background": colors.black,
-  "sideBarSectionHeader.foreground": colors.magenta,
-  "sideBar.border": colors.magenta33,
-  "sideBar.background": colors.black,
-  "sideBarTitle.foreground": colors.white
+const sidebarColors = (palette /*: Palette */) => ({
+  "sideBarTitle.foreground": palette.magenta,
+  "sideBarSectionHeader.border": palette.magenta33,
+  "sideBarSectionHeader.background": palette.black,
+  "sideBarSectionHeader.foreground": palette.magenta,
+  "sideBar.border": palette.magenta33,
+  "sideBar.background": palette.black,
+  "sideBarTitle.foreground": palette.white
 });
 
 module.exports = sidebarColors;

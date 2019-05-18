@@ -1,8 +1,14 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#diff-editor-colors
-const diffEditor = colors => ({
-  "diffEditor.insertedTextBackground": `${colors.green}11`,
-  "diffEditor.removedTextBackground": `${colors.red}11`,
-  "diffEditor.border": colors.magenta77
+const diffEditor = (palette /*: Palette */) => ({
+  "diffEditor.insertedTextBackground": `${palette.green}11`,
+  "diffEditor.removedTextBackground": `${palette.red}11`,
+  "diffEditor.border": palette.magenta77
 });
 
 module.exports = diffEditor;

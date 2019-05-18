@@ -1,16 +1,22 @@
-const html = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const html = (palette /*: Palette */) => [
   {
     name: "HTML - Tag",
     scope: "text.html entity.name.tag",
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "HTML - Attribute",
     scope: "text.html entity.other.attribute-name",
     settings: {
-      foreground: colors.blue
+      foreground: palette.blue
     }
   },
   {

@@ -1,23 +1,29 @@
-const clojure = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const clojure = (palette /*: Palette */) => [
   {
     name: "Clojure - Constant Keyword",
     scope: "source.clojure constant.keyword",
     settings: {
-      foreground: colors.blue
+      foreground: palette.blue
     }
   },
   {
     name: "Clojure - Storage Control",
     scope: "source.clojure storage.control",
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "Clojure - Symbol",
     scope: "source.clojure meta.symbol",
     settings: {
-      foreground: colors.cyan,
+      foreground: palette.cyan,
       fontStyle: "italic"
     }
   }

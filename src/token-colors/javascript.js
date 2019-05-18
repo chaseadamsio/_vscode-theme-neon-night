@@ -1,16 +1,22 @@
-const javascript = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const javascript = (palette /*: Palette */) => [
   {
     name: "JS - Import/Require",
     scope: "source.js keyword.control.module",
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "JS - Object Property Keys",
     scope: "source.js string.unquoted",
     settings: {
-      foreground: colors.white,
+      foreground: palette.white,
       fontStyle: "italic"
     }
   },
@@ -21,14 +27,14 @@ const javascript = colors => [
       "source.js constant.other.object.key.js string.quoted punctuation"
     ],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "JS - Support",
     scope: "source.js support.type",
     settings: {
-      foreground: colors.magenta,
+      foreground: palette.magenta,
       fontStyle: "normal"
     }
   },
@@ -36,7 +42,7 @@ const javascript = colors => [
     name: "Flow - Type Name",
     scope: "source.js support.type.class.flowtype",
     settings: {
-      foreground: colors.white,
+      foreground: palette.white,
       fontStyle: "bold"
     }
   },
@@ -48,7 +54,7 @@ const javascript = colors => [
       "source.js variable.other.class.js"
     ],
     settings: {
-      foreground: colors.white,
+      foreground: palette.white,
       fontStyle: "bold"
     }
   },
@@ -56,7 +62,7 @@ const javascript = colors => [
     name: "JS - Variable Language (ie, this)",
     scope: "source.js variable.language",
     settings: {
-      foreground: colors.white,
+      foreground: palette.white,
       fontStyle: "bold"
     }
   },
@@ -64,21 +70,21 @@ const javascript = colors => [
     name: "JSX - Tag",
     scope: "source.js meta.tag.jsx",
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "JSX - Punctuation",
     scope: "source.js punctuation.definition.tag.jsx",
     settings: {
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
     name: "JSX - Attributes",
     scope: "source.js entity.other.attribute-name.jsx",
     settings: {
-      foreground: colors.blue,
+      foreground: palette.blue,
       fontStyle: "italic"
     }
   }

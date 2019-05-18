@@ -1,4 +1,10 @@
-const json = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const json = (palette /*: Palette */) => [
   {
     name: "JSON - Property Name",
     scope: [
@@ -6,14 +12,14 @@ const json = colors => [
       "source.json punctuation.support.type.property-name"
     ],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
     name: "JSON - Constant",
     scope: "source.json constant.language",
     settings: {
-      foreground: colors.white,
+      foreground: palette.white,
       fontStyle: "bold"
     }
   },
@@ -24,7 +30,7 @@ const json = colors => [
       "source.json string.quoted.double punctuation"
     ],
     settings: {
-      foreground: colors.green
+      foreground: palette.green
     }
   }
 ];

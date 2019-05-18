@@ -1,9 +1,15 @@
-const markdown = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const markdown = (palette /*: Palette */) => [
   {
     name: "Markdown - Plain",
     scope: ["text.html.markdown", "punctuation.definition.list_item.markdown"],
     settings: {
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
@@ -13,7 +19,7 @@ const markdown = colors => [
       "text.html.markdown markup.inline.raw punctuation.definition.raw.markdown"
     ],
     settings: {
-      foreground: colors.blue,
+      foreground: palette.blue,
       fontStyle: "bold"
     }
   },
@@ -21,7 +27,7 @@ const markdown = colors => [
     name: "Markdown - Heading",
     scope: "text.html.markdown markup.heading",
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
@@ -29,7 +35,7 @@ const markdown = colors => [
     scope: ["text.html.markdown markup.italic"],
     settings: {
       fontStyle: "italic",
-      foreground: colors.cyan
+      foreground: palette.cyan
     }
   },
   {
@@ -40,7 +46,7 @@ const markdown = colors => [
     ],
     settings: {
       fontStyle: "bold",
-      foreground: colors.cyan
+      foreground: palette.cyan
     }
   },
   {
@@ -48,7 +54,7 @@ const markdown = colors => [
     scope: ["text.html.markdown markup.underline"],
     settings: {
       fontStyle: "underline",
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
@@ -57,7 +63,7 @@ const markdown = colors => [
       "text.html.markdown markup.quote punctuation.definition.blockquote.markdown"
     ],
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
@@ -65,42 +71,42 @@ const markdown = colors => [
     scope: ["text.html.markdown markup.quote"],
     settings: {
       fontStyle: "italic",
-      foreground: colors.blue
+      foreground: palette.blue
     }
   },
   {
     name: "Markdown - Link",
     scope: ["text.html.markdown string.other.link.title.markdown"],
     settings: {
-      foreground: colors.blue
+      foreground: palette.blue
     }
   },
   {
     name: "Markdown - Link Description",
     scope: ["text.html.markdown string.other.link.description.title"],
     settings: {
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
     name: "Markdown - Link Anchor",
     scope: ["text.html.markdown markup.underline.link"],
     settings: {
-      foreground: colors.green
+      foreground: palette.green
     }
   },
   {
     name: "Markdown - Raw Block",
     scope: ["text.html.markdown markup.raw.block"],
     settings: {
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
     name: "Markdown - Raw Block Fenced",
     scope: ["text.html.markdown markup.raw.block.fenced"],
     settings: {
-      foreground: colors.white
+      foreground: palette.white
     }
   },
   {
@@ -109,7 +115,7 @@ const markdown = colors => [
       "text.html.markdown markup.fenced_code.block punctuation.definition"
     ],
     settings: {
-      foreground: colors.blue
+      foreground: palette.blue
     }
   },
   {
@@ -117,7 +123,7 @@ const markdown = colors => [
     scope: ["text.html markdown meta.separator"],
     settings: {
       fontStyle: "bold",
-      foreground: colors.white
+      foreground: palette.white
     }
   }
 ];
