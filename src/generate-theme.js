@@ -3,7 +3,9 @@
 import type { Theme } from './types'
 */
 
-const generateTheme = ({ displayName, palette } /*: Theme */) => ({
+const generateTheme = (
+  { displayName, palette, fontStyleEnabled } /*: Theme */
+) => ({
   name: displayName,
   type: "dark",
   colors: {
@@ -36,7 +38,7 @@ const generateTheme = ({ displayName, palette } /*: Theme */) => ({
     ...require("./colors/breadcrumbs")(palette)
   },
   tokenColors: [
-    ...require("./token-colors/base")(palette),
+    ...require("./token-colors/base")(palette, fontStyleEnabled),
     ...require("./token-colors/clojure")(palette),
     ...require("./token-colors/css")(palette),
     ...require("./token-colors/docker")(palette),

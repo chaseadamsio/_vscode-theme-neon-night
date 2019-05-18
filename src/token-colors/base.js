@@ -4,12 +4,12 @@
 import type {Palette} from '../types'
 */
 
-const base = (palette /*: Palette */) => [
+const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
   {
     name: "Base - Comment",
     scope: ["comment", "punctuation.definition.comment"],
     settings: {
-      fontStyle: "italic",
+      fontStyle: fontStyleEnabled ? "italic" : "normal",
       foreground: palette.magenta77
     }
   },
@@ -25,7 +25,7 @@ const base = (palette /*: Palette */) => [
     scope: ["entity.name.function"],
     settings: {
       foreground: palette.white,
-      fontStyle: "italic"
+      fontStyle: fontStyleEnabled ? "italic" : "normal"
     }
   },
   {
@@ -39,7 +39,7 @@ const base = (palette /*: Palette */) => [
     name: "Base - Boolean",
     scope: "constant.language.boolean",
     settings: {
-      fontStyle: "bold",
+      fontStyle: fontStyleEnabled ? "bold" : "normal",
       foreground: palette.white
     }
   },
@@ -61,7 +61,7 @@ const base = (palette /*: Palette */) => [
     name: "Base - Storage",
     scope: ["storage.type", "storage.modifier"],
     settings: {
-      fontStyle: "italic",
+      fontStyle: fontStyleEnabled ? "italic" : "normal",
       foreground: palette.magenta
     }
   },
@@ -82,7 +82,7 @@ const base = (palette /*: Palette */) => [
       "keyword.control"
     ],
     settings: {
-      fontStyle: "italic",
+      fontStyle: fontStyleEnabled ? "italic" : "normal",
       foreground: palette.magenta
     }
   },
@@ -111,7 +111,7 @@ const base = (palette /*: Palette */) => [
     name: "Base - Language Variable",
     scope: ["variable.language"],
     settings: {
-      fontStyle: "bold",
+      fontStyle: fontStyleEnabled ? "bold" : "normal",
       foreground: palette.white
     }
   },
@@ -119,7 +119,7 @@ const base = (palette /*: Palette */) => [
     name: "Base - Attributes",
     scope: ["entity.other.attribute-name"],
     settings: {
-      fontStyle: "italic",
+      fontStyle: fontStyleEnabled ? "italic" : "normal",
       foreground: palette.magenta
     }
   },

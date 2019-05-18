@@ -1,6 +1,6 @@
 // @flow
 
-export type Palette = {
+export type Palette = {|
   blackest: string,
   black: string,
   blacklight: string,
@@ -22,10 +22,10 @@ export type Palette = {
   green77: string,
   green33: string,
   yellow: string
-};
+|};
 
-export type Theme = {
+export type Theme = {|
   displayName: string,
   fontStyleEnabled: boolean,
   palette: Palette
-};
+|};
