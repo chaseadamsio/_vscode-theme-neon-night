@@ -33,6 +33,14 @@ const javascript = colors => [
     }
   },
   {
+    name: "Flow - Type Name",
+    scope: "source.js support.type.class.flowtype",
+    settings: {
+      foreground: colors.white,
+      fontStyle: "bold"
+    }
+  },
+  {
     name: "JS - Sub-methods",
     scope: [
       "source.js entity.name.module.js",
