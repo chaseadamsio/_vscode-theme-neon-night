@@ -25,4 +25,8 @@ yarn develop:init
 
 This will create a symlink in the VS Code extensions and build the theme for the first time. Afte running this, follow the Installation instructions to load the theme.
 
+## Publishing
+
+When this theme is published, the built `<ROOT>/themes` directory is built before publishing and that directory is published as the project root.
+
 Designed with 💜 by **[Chase Adams](https://github.com/chaseadamsio)**. You can find me on [Twitter at chaseadamsio](https://twitter.com/chaseadamsio).
