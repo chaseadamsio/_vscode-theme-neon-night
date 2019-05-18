@@ -1,4 +1,4 @@
-const pkgjson = require("../package.json");
+const pkgjson = require(`../package.json`);
 
 const { name, version, description, license, repository, publisher } = pkgjson;
 
@@ -16,23 +16,23 @@ module.exports = themeInfo => ({
   license,
   repository,
   homepage,
-  displayName: "Neon Night",
+  displayName: `Neon Night`,
   engines: {
-    vscode: "^1.33.0"
+    vscode: `^1.33.0`
   },
-  icon: "icon.png",
+  icon: `icon.png`,
   galleryBanner: {
-    color: "#1E2129",
-    theme: "dark"
+    color: `#1E2129`,
+    theme: `dark`
   },
-  categories: ["Themes"],
-  keywords: ["theme", "dark", "purple", "neon"],
+  categories: [`Themes`],
+  keywords: [`theme`, `dark`, `purple`, `neon`],
   contributes: {
     themes: [
       {
-        label: "Neon Night",
-        uiTheme: "vs-dark",
-        path: "./neon-night-theme.json"
+        label: `Neon Night`,
+        uiTheme: `vs-dark`,
+        path: `./neon-night-theme.json`
       }
     ]
   },
@@ -43,17 +43,17 @@ module.exports = themeInfo => ({
     {
       url: `${marketplaceBadgeRoot}/version/${publisher}.${pkgjson.name}.svg`,
       href: marketplaceURL,
-      description: "Extension Version"
+      description: `Extension Version`
     },
     {
       url: `${marketplaceBadgeRoot}/installs/${publisher}.${pkgjson.name}.svg`,
       href: marketplaceURL,
-      description: "Extension Installs"
+      description: `Extension Installs`
     },
     {
       url: `${marketplaceBadgeRoot}/rating/${publisher}.${pkgjson.name}.svg`,
       href: marketplaceURL,
-      description: "Extension Rating"
+      description: `Extension Rating`
     }
   ]
 });

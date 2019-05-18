@@ -1,10 +1,16 @@
-const docker = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const docker = (palette /*: Palette */) => [
   {
-    name: "Dockerfile - Instruction",
-    scope: "source.dockerfile keyword.other.special-method",
+    name: `Dockerfile - Instruction`,
+    scope: `source.dockerfile keyword.other.special-method`,
     settings: {
-      foreground: colors.magenta,
-      fontStyle: "bold"
+      foreground: palette.magenta,
+      fontStyle: `bold`
     }
   }
 ];

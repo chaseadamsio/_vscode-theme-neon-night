@@ -1,43 +1,49 @@
-const makefile = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const makefile = (palette /*: Palette */) => [
   {
-    name: "Makefile - Language Variable",
-    scope: "source.makefile variable.language",
+    name: `Makefile - Language Variable`,
+    scope: `source.makefile variable.language`,
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
-    scope: "source.makefile support.function.target.PHONY",
+    scope: `source.makefile support.function.target.PHONY`,
     settings: {
-      foreground: colors.blue
+      foreground: palette.blue
     }
   },
   {
-    name: "Makefile - Target Name",
-    scope: "source.makefile entity.name.function.target.makefile",
+    name: `Makefile - Target Name`,
+    scope: `source.makefile entity.name.function.target.makefile`,
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   },
   {
-    name: "Makefile - Interpolated Language Variable",
-    scope: "source.makefile string.interpolated variable.language",
+    name: `Makefile - Interpolated Language Variable`,
+    scope: `source.makefile string.interpolated variable.language`,
     settings: {
-      foreground: colors.green
+      foreground: palette.green
     }
   },
   {
-    name: "Makefile - Punctuation (ie, $() )",
-    scope: "source.makefile punctuation.definition",
+    name: `Makefile - Punctuation (ie, $() )`,
+    scope: `source.makefile punctuation.definition`,
     settings: {
-      foreground: colors.green
+      foreground: palette.green
     }
   },
   {
-    name: "Makefile - Function Call",
-    scope: "source.makefile meta.scope.function-call",
+    name: `Makefile - Function Call`,
+    scope: `source.makefile meta.scope.function-call`,
     settings: {
-      foreground: colors.cyan
+      foreground: palette.cyan
     }
   }
 ];

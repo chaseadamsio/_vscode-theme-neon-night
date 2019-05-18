@@ -1,11 +1,17 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#merge-conflicts
-const mergeConflicts = colors => ({
-  "merge.currentHeaderBackground": colors.green77,
-  "merge.currentContentBackground": colors.green33,
-  "merge.incomingHeaderBackground": colors.blue77,
-  "merge.incomingContentBackground": colors.blue33,
-  "merge.commonContentBackground": colors.black,
-  "merge.commonHeaderBackground": colors.black
+const mergeConflicts = (palette /*: Palette */) => ({
+  "merge.currentHeaderBackground": palette.green77,
+  "merge.currentContentBackground": palette.green33,
+  "merge.incomingHeaderBackground": palette.blue77,
+  "merge.incomingContentBackground": palette.blue33,
+  "merge.commonContentBackground": palette.black,
+  "merge.commonHeaderBackground": palette.black
 });
 
 module.exports = mergeConflicts;

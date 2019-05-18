@@ -1,15 +1,21 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#lists-and-trees
-const list = colors => ({
-  "list.hoverBackground": colors.blackout,
-  "list.border": colors.blackest,
-  "list.hoverForeground": colors.magenta,
-  "list.focusBackground": colors.blackest,
-  "list.focusForeground": colors.white,
-  "list.highlightForeground": colors.magenta,
-  "list.inactiveSelectionBackground": colors.magenta33,
-  "list.inactiveSelectionForeground": colors.white,
-  "list.activeSelectionBackground": colors.blackest,
-  "list.activeSelectionForeground": colors.magenta
+const list = (palette /*: Palette */) => ({
+  "list.hoverBackground": palette.blackout,
+  "list.border": palette.blackest,
+  "list.hoverForeground": palette.magenta,
+  "list.focusBackground": palette.blackest,
+  "list.focusForeground": palette.white,
+  "list.highlightForeground": palette.magenta,
+  "list.inactiveSelectionBackground": palette.magenta33,
+  "list.inactiveSelectionForeground": palette.white,
+  "list.activeSelectionBackground": palette.blackest,
+  "list.activeSelectionForeground": palette.magenta
 });
 
 module.exports = list;

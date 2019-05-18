@@ -1,8 +1,14 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#git-colors
-const git = colors => ({
-  "gitDecoration.addedResourceForeground": colors.green,
-  "gitDecoration.modifiedResourceForeground": colors.magenta,
-  "gitDecoration.deletedResourceForeground": colors.red
+const git = (palette /*: Palette */) => ({
+  "gitDecoration.addedResourceForeground": palette.green,
+  "gitDecoration.modifiedResourceForeground": palette.magenta,
+  "gitDecoration.deletedResourceForeground": palette.red
 });
 
 module.exports = git;

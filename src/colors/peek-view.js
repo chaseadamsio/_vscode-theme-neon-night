@@ -1,20 +1,26 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#peek-view-colors
-const peekView = colors => ({
-  "peekView.border": colors.magenta33,
-  "peekViewEditor.matchHighlightBackground": colors.magenta33,
-  "peekViewEditor.matchHighlightBorder": colors.black,
-  "peekViewEditorGutter.background": colors.black,
-  "peekViewTitle.background": colors.black,
-  "peekViewTitleDescription.foreground": colors.white,
-  "peekViewTitleLabel.foreground": colors.magenta,
-  "peekViewResult.background": colors.black,
-  "peekViewResult.matchHighlightBackground": colors.magenta33,
-  "peekViewResult.fileForeground": colors.white,
-  "peekViewResult.lineForeground": colors.white77,
-  "peekViewResult.selectionBackground": colors.magenta33,
-  "peekViewResult.selectionForeground": colors.white,
-  "peekViewResult.background": colors.black,
-  "peekViewEditor.background": colors.black
+const peekView = (palette /*: Palette */) => ({
+  "peekView.border": palette.magenta33,
+  "peekViewEditor.matchHighlightBackground": palette.magenta33,
+  "peekViewEditor.matchHighlightBorder": palette.black,
+  "peekViewEditorGutter.background": palette.black,
+  "peekViewTitle.background": palette.black,
+  "peekViewTitleDescription.foreground": palette.white,
+  "peekViewTitleLabel.foreground": palette.magenta,
+  "peekViewResult.background": palette.black,
+  "peekViewResult.matchHighlightBackground": palette.magenta33,
+  "peekViewResult.fileForeground": palette.white,
+  "peekViewResult.lineForeground": palette.white77,
+  "peekViewResult.selectionBackground": palette.magenta33,
+  "peekViewResult.selectionForeground": palette.white,
+  "peekViewResult.background": palette.black,
+  "peekViewEditor.background": palette.black
 });
 
 module.exports = peekView;

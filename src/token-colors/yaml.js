@@ -1,9 +1,15 @@
-const yaml = colors => [
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
+const yaml = (palette /*: Palette */) => [
   {
-    name: "YAML - Property Name",
-    scope: "source.yaml entity.name.tag",
+    name: `YAML - Property Name`,
+    scope: `source.yaml entity.name.tag`,
     settings: {
-      foreground: colors.magenta
+      foreground: palette.magenta
     }
   }
 ];

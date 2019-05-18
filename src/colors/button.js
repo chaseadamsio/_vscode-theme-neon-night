@@ -1,8 +1,14 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#button-control
-const buttonColors = colors => ({
-  "button.background": colors.blue,
-  "button.hoverBackground": colors.cyan,
-  "button.foreground": colors.black
+const buttonColors = (palette /*: Palette */) => ({
+  "button.background": palette.blue,
+  "button.hoverBackground": palette.cyan,
+  "button.foreground": palette.black
 });
 
 module.exports = buttonColors;

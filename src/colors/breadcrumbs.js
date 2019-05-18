@@ -1,10 +1,16 @@
+// @flow
+
+/* ::
+import type {Palette} from '../types'
+*/
+
 // https://code.visualstudio.com/api/references/theme-color#breadcrumbs
-const breadcrumbs = colors => ({
-  "breadcrumb.foreground": colors.white,
-  "breadcrumb.background": colors.black,
-  "breadcrumbPicker.background": colors.black,
-  "breadcrumb.focusForeground": colors.magenta,
-  "breadcrumb.activeSelectionForeground": colors.magenta
+const breadcrumbs = (palette /*: Palette */) => ({
+  "breadcrumb.foreground": palette.white,
+  "breadcrumb.background": palette.black,
+  "breadcrumbPicker.background": palette.black,
+  "breadcrumb.focusForeground": palette.magenta,
+  "breadcrumb.activeSelectionForeground": palette.magenta
 });
 
 module.exports = breadcrumbs;

@@ -1,47 +1,54 @@
-const generateTheme = (themeName, colors) => ({
-  name: "Neon Night",
-  type: "dark",
+// @flow
+/* ::
+import type { Theme } from './types'
+*/
+
+const generateTheme = (
+  { displayName, palette, fontStyleEnabled } /*: Theme */
+) => ({
+  name: displayName,
+  type: `dark`,
   colors: {
-    ...require("./colors/sidebar")(colors),
-    ...require("./colors/base")(colors),
-    ...require("./colors/text")(colors),
-    ...require("./colors/button")(colors),
-    ...require("./colors/dropdown")(colors),
-    ...require("./colors/input")(colors),
-    ...require("./colors/scrollbar")(colors),
-    ...require("./colors/badge")(colors),
-    ...require("./colors/progress-bar")(colors),
-    ...require("./colors/list")(colors),
-    ...require("./colors/activity-bar")(colors),
-    ...require("./colors/editor-groups-tabs")(colors),
-    ...require("./colors/editor")(colors),
-    ...require("./colors/diff-editor")(colors),
-    ...require("./colors/editor-widget")(colors),
-    ...require("./colors/peek-view")(colors),
-    ...require("./colors/merge-conflicts")(colors),
-    ...require("./colors/panel")(colors),
-    ...require("./colors/status-bar")(colors),
-    ...require("./colors/title-bar")(colors),
-    ...require("./colors/menu-bar")(colors),
-    ...require("./colors/notification")(colors),
-    ...require("./colors/quick-picker")(colors),
-    ...require("./colors/integrated-terminal")(colors),
-    ...require("./colors/debug")(colors),
-    ...require("./colors/git")(colors),
-    ...require("./colors/breadcrumbs")(colors)
+    ...require(`./colors/sidebar`)(palette),
+    ...require(`./colors/base`)(palette),
+    ...require(`./colors/text`)(palette),
+    ...require(`./colors/button`)(palette),
+    ...require(`./colors/dropdown`)(palette),
+    ...require(`./colors/input`)(palette),
+    ...require(`./colors/scrollbar`)(palette),
+    ...require(`./colors/badge`)(palette),
+    ...require(`./colors/progress-bar`)(palette),
+    ...require(`./colors/list`)(palette),
+    ...require(`./colors/activity-bar`)(palette),
+    ...require(`./colors/editor-groups-tabs`)(palette),
+    ...require(`./colors/editor`)(palette),
+    ...require(`./colors/diff-editor`)(palette),
+    ...require(`./colors/editor-widget`)(palette),
+    ...require(`./colors/peek-view`)(palette),
+    ...require(`./colors/merge-conflicts`)(palette),
+    ...require(`./colors/panel`)(palette),
+    ...require(`./colors/status-bar`)(palette),
+    ...require(`./colors/title-bar`)(palette),
+    ...require(`./colors/menu-bar`)(palette),
+    ...require(`./colors/notification`)(palette),
+    ...require(`./colors/quick-picker`)(palette),
+    ...require(`./colors/integrated-terminal`)(palette),
+    ...require(`./colors/debug`)(palette),
+    ...require(`./colors/git`)(palette),
+    ...require(`./colors/breadcrumbs`)(palette)
   },
   tokenColors: [
-    ...require("./token-colors/base")(colors),
-    ...require("./token-colors/clojure")(colors),
-    ...require("./token-colors/css")(colors),
-    ...require("./token-colors/docker")(colors),
-    ...require("./token-colors/go")(colors),
-    ...require("./token-colors/html")(colors),
-    ...require("./token-colors/javascript")(colors),
-    ...require("./token-colors/json")(colors),
-    ...require("./token-colors/makefile")(colors),
-    ...require("./token-colors/markdown")(colors),
-    ...require("./token-colors/yaml")(colors)
+    ...require(`./token-colors/base`)(palette, fontStyleEnabled),
+    ...require(`./token-colors/clojure`)(palette),
+    ...require(`./token-colors/css`)(palette),
+    ...require(`./token-colors/docker`)(palette),
+    ...require(`./token-colors/go`)(palette),
+    ...require(`./token-colors/html`)(palette),
+    ...require(`./token-colors/javascript`)(palette),
+    ...require(`./token-colors/json`)(palette),
+    ...require(`./token-colors/makefile`)(palette),
+    ...require(`./token-colors/markdown`)(palette),
+    ...require(`./token-colors/yaml`)(palette)
   ]
 });
 
