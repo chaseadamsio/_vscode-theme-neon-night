@@ -40,7 +40,8 @@ const generateTheme = (themeName, colors) => ({
     ...require("./token-colors/javascript")(colors),
     ...require("./token-colors/json")(colors),
     ...require("./token-colors/makefile")(colors),
-    ...require("./token-colors/markdown")(colors)
+    ...require("./token-colors/markdown")(colors),
+    ...require("./token-colors/yaml")(colors)
   ]
 });
 
