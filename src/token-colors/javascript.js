@@ -13,6 +13,13 @@ const javascript = (palette /*: Palette */) => [
     }
   },
   {
+    name: `JS - Accessor`,
+    scope: `source.js keyword.operator.accessor`,
+    settings: {
+      foreground: palette.magenta
+    }
+  },
+  {
     name: `JS - Object Property Keys`,
     scope: `source.js string.unquoted`,
     settings: {
