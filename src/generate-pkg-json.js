@@ -20,7 +20,7 @@ module.exports = themeInfo => ({
   engines: {
     vscode: `^1.33.0`
   },
-  icon: `icon.png`,
+  icon: `static/icon.png`,
   galleryBanner: {
     color: `#1E2129`,
     theme: `dark`
