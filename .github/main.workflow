@@ -21,7 +21,6 @@ action "Release" {
 
 action "Publish" {
   needs = "Release"
-  uses = "lannonbr/vsce-action@master"
-  args = "publish -p $VSCE_TOKEN"
+  uses = "./.github/actions/release"
   secrets = ["VSCE_TOKEN", "GITHUB_TOKEN"]
 }
