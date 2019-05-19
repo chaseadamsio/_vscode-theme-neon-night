@@ -21,5 +21,6 @@ action "Publish" {
   # needs = "Tag"
   uses = "lannonbr/vsce-action@master"
   args = "publish -p $VSCE_TOKEN"
-  secrets = ["VSCE_TOKEN"]
+  secrets = ["GITHUB_TOKEN"]
+  # secrets = ["VSCE_TOKEN"]
 }
