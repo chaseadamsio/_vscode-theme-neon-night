@@ -1,14 +1,17 @@
 module.exports = {
-  npm: false,
+  //   npm: false (commenting out but leaving, )
   github: {
-    release: true,
-    releaseNotes: true
+    release: false,
+    releaseNotes: false
   },
   git: {
     changelog:
-      "npx auto-changelog --stdout --commit-limit false -u --template ./src/changelog.hbs"
+      "npx auto-changelog --stdout --commit-limit false -u --template ./release-it/changelog.hbs"
   },
   scripts: {
-    beforeStage: "npx auto-changelog -p --template ./changelog.hbs"
+    beforeStage: "npx auto-changelog -p"
+  },
+  plugins: {
+    "./release-it/version.js": {}
   }
 };
