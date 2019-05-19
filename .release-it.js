@@ -1,6 +1,6 @@
 module.exports = {
-    npm: false,
-    github: {
-        release: true
-    }
-}
+  npm: false,
+  github: {
+    release: true
+  }
+};
