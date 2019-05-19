@@ -16,7 +16,7 @@ action "Tag" {
 action "Release" {
   needs = "Tag"
   uses = "./.github/actions/release"
-  secrets = ["GITHUB_TOKEN", "SSH_PRIVATE_KEY"]
+  secrets = ["GITHUB_TOKEN"]
 }
 
 # action "Publish" {
