@@ -1,5 +1,8 @@
 # Neon Night
 
+[![Version](https://vsmarketplacebadge.apphb.com/version/chaseadamsio.vscode-theme-neon-night.svg)](https://marketplace.visualstudio.com/items/chaseadamsio.vscode-theme-neon-night)
+[![Downloads](https://vsmarketplacebadge.apphb.com/installs/chaseadamsio.vscode-theme-neon-night.svg)](https://marketplace.visualstudio.com/items/chaseadamsio.vscode-theme-neon-night)
+
 > A dark theme for VS Code
 
 ![Full Preview](static/preview/full-preview.png)
