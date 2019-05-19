@@ -8,7 +8,7 @@
     "url": "https://github.com/chaseadamsio/vscode-theme-neon-night"
   },
   "private": true,
-  "version": "0.10.0",
+  "version": "0.11.0",
   "scripts": {
     "build": "node src/index.js",
     "clean": "rm -rf themes",
