@@ -6,7 +6,8 @@ module.exports = {
   },
   git: {
     changelog:
-      "npx auto-changelog --stdout --commit-limit false -u --template ./release-it/changelog.hbs"
+      "npx auto-changelog --stdout --commit-limit false -u --template ./release-it/changelog.hbs",
+    requireUpstream: false
   },
   scripts: {
     beforeStage: "npx auto-changelog -p"
