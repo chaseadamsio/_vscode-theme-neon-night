@@ -1,6 +1,6 @@
 workflow "Check, Build, Release & Publish" {
   on = "push"
-  resolves = ["Publish to VS Marketplac"]
+  resolves = ["Publish to VS Marketplace"]
 }
 
 action "Check Code" {
