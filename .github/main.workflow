@@ -5,7 +5,7 @@ workflow "Pull Request" {
 
 workflow "Build, Test & Publish" {
   on = "push"
-  resolves = ["Publish"]
+  resolves = ["Release"]
 }
 
 action "Check Code" {
@@ -17,10 +17,15 @@ action "Tag" {
   args = "tag v*"
 }
 
-action "Publish" {
-  # needs = "Tag"
-  uses = "lannonbr/vsce-action@master"
-  args = "publish -p $VSCE_TOKEN"
+action "Release" {
+  uses = "./.github/actions/release"
   secrets = ["GITHUB_TOKEN"]
-  # secrets = ["VSCE_TOKEN"]
 }
+
+# action "Publish" {
+  # needs = "Tag"
+  # uses = "lannonbr/vsce-action@master"
+  # args = "publish -p $VSCE_TOKEN"
+  # secrets = ["GITHUB_TOKEN"]
+  # secrets = ["VSCE_TOKEN"]
+# }
