@@ -1,3 +1,4 @@
 #!/bin/sh
-yarn install
-yarn vscode:publish
+yarn install \
+    && yarn prepublish \
+    && yarn vscode:publish

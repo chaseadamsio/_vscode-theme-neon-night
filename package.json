@@ -18,7 +18,7 @@
     "test:check-code": "yarn test:lint && yarn test:flow",
     "test:flow": "flow check",
     "test:lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
-    "vscode:prepublish": "(test -d themes || mkdir themes) && yarn build && yarn cp:static",
+    "prepublish": "(test -d themes || mkdir themes) && yarn build && yarn cp:static",
     "vscode:publish": "cd themes && vsce publish -p $GITHUB_TOKEN"
   },
   "dependencies": {
