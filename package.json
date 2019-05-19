@@ -19,7 +19,7 @@
     "test:flow": "flow check",
     "test:lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
     "prepublish": "(test -d themes || mkdir themes) && yarn build && yarn cp:static",
-    "vscode:publish": "cd themes && vsce publish -p $GITHUB_TOKEN"
+    "vscode:publish": "cd themes && vsce publish -p $VSCE_TOKEN"
   },
   "dependencies": {
     "auto-changelog": "^1.13.0",
