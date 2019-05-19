@@ -16,6 +16,7 @@ module.exports = themeInfo => ({
   license,
   repository,
   homepage,
+  publisher,
   displayName: `Neon Night`,
   engines: {
     vscode: `^1.33.0`
