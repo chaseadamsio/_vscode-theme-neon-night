@@ -1,8 +1,7 @@
 module.exports = {
-  //   npm: false (commenting out but leaving, )
   github: {
-    release: false,
-    releaseNotes: false
+    release: true,
+    releaseNotes: true
   },
   git: {
     changelog:
