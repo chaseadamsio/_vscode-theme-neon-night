@@ -1,8 +1,3 @@
-workflow "Pull Request" {
-  on = "push"
-  resolves = ["Check Code"]
-}
-
 workflow "Build, Test & Publish" {
   on = "push"
   resolves = ["Release"]
