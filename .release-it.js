@@ -1,7 +1,6 @@
 module.exports = {
   github: {
-    release: true,
-    releaseNotes: true
+    release: true
   },
   git: {
     changelog:
