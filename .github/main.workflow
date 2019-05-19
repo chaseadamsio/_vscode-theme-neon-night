@@ -13,11 +13,13 @@ action "Check Code" {
 }
 
 action "Tag" {
+  needs = "Check Code"
   uses = "actions/bin/filter@master"
   args = "tag v*"
 }
 
 action "Release" {
+  needs = "Tag"
   uses = "./.github/actions/release"
   secrets = ["GITHUB_TOKEN", "SSH_PRIVATE_KEY"]
 }
