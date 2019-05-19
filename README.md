@@ -1,5 +1,8 @@
 # Neon Night
 
+[![Version](https://vsmarketplacebadge.apphb.com/version/chaseadamsio.vscode-theme-neon-night.svg)](https://marketplace.visualstudio.com/items/chaseadamsio.vscode-theme-neon-night)
+[![Downloads](https://vsmarketplacebadge.apphb.com/installs/chaseadamsio.vscode-theme-neon-night.svg)](https://marketplace.visualstudio.com/items/chaseadamsio.vscode-theme-neon-night)
+
 > A dark theme for VS Code
 
 ![Full Preview](static/preview/full-preview.png)
@@ -60,7 +63,7 @@ This will create a symlink in the VS Code extensions and build the theme for the
 
 ## Publishing
 
-- **`vscode:prepublish`** - Creates the `neon-night.json` and `package.json` in `<ROOT>/themes` and copies relevant files (README, license, static assets)
+- **`prepublish`** - Creates the `neon-night.json` and `package.json` in `<ROOT>/themes` and copies relevant files (README, license, static assets)
 - **`vscode:publish`** - Publishes `themes` as the root directory for the extension.
 
 Designed with 💜 by **[Chase Adams](https://github.com/chaseadamsio)**. You can find me on [Twitter at chaseadamsio](https://twitter.com/chaseadamsio).
