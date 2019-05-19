@@ -7,12 +7,13 @@
     "type": "git",
     "url": "https://github.com/chaseadamsio/vscode-theme-neon-night"
   },
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build": "node src/index.js",
     "clean": "rm -rf themes",
     "cp:static": "cp README.md themes && cp LICENSE themes && cp -R static themes",
     "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build",
+    "release": "release-it --ci --dry-run",
     "test:check-code": "yarn test:lint && yarn test:flow",
     "test:flow": "flow check",
     "test:lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
@@ -25,6 +26,7 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-flowtype": "^3.9.0",
     "flow-bin": "^0.98.1",
-    "prettier": "^1.17.1"
+    "prettier": "^1.17.1",
+    "release-it": "^12.2.0"
   }
 }
