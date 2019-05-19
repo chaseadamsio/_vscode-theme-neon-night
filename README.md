@@ -60,7 +60,7 @@ This will create a symlink in the VS Code extensions and build the theme for the
 
 ## Publishing
 
-- **`vscode:prepublish`** - Creates the `neon-night.json` and `package.json` in `<ROOT>/themes` and copies relevant files (README, license, static assets)
+- **`prepublish`** - Creates the `neon-night.json` and `package.json` in `<ROOT>/themes` and copies relevant files (README, license, static assets)
 - **`vscode:publish`** - Publishes `themes` as the root directory for the extension.
 
 Designed with 💜 by **[Chase Adams](https://github.com/chaseadamsio)**. You can find me on [Twitter at chaseadamsio](https://twitter.com/chaseadamsio).
