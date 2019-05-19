@@ -1,6 +1,6 @@
 workflow "Build, Test & Publish" {
   on = "push"
-  resolves = ["Release"]
+  resolves = ["Publish"]
 }
 
 action "Check Code" {
@@ -19,10 +19,9 @@ action "Release" {
   secrets = ["GITHUB_TOKEN"]
 }
 
-# action "Publish" {
-  # needs = "Tag"
-  # uses = "lannonbr/vsce-action@master"
-  # args = "publish -p $VSCE_TOKEN"
-  # secrets = ["GITHUB_TOKEN"]
-  # secrets = ["VSCE_TOKEN"]
-# }
+action "Publish" {
+  needs = "Release"
+  uses = "lannonbr/vsce-action@master"
+  args = "publish -p $VSCE_TOKEN"
+  secrets = ["VSCE_TOKEN", "GITHUB_TOKEN"]
+}
