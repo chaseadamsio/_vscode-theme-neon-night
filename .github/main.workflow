@@ -21,6 +21,6 @@ action "Release" {
 
 action "Publish" {
   needs = "Release"
-  uses = "./.github/actions/release"
+  uses = "./.github/actions/publish"
   secrets = ["VSCE_TOKEN", "GITHUB_TOKEN"]
 }
