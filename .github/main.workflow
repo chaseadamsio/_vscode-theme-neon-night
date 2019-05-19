@@ -15,7 +15,7 @@ action "Check Code" {
 action "Tag" {
   needs = "Check Code"
   uses = "actions/bin/filter@master"
-  args = "tag v*"
+  args = "branch master"
 }
 
 action "Release" {
