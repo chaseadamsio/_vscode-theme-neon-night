@@ -1,26 +1,26 @@
-workflow "Build, Test & Publish" {
+workflow "Check, Build, Release & Publish" {
   on = "push"
-  resolves = ["Publish"]
+  resolves = ["Publish to VS Marketplace"]
 }
 
 action "Check Code" {
     uses ="./.github/actions/check"
 }
 
-action "Tag" {
+action "Is Master Branch" {
   needs = "Check Code"
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
 
-action "Release" {
-  needs = "Tag"
+action "Generate Release" {
+  needs = "Is Master Branch"
   uses = "./.github/actions/release"
   secrets = ["GITHUB_TOKEN"]
 }
 
-action "Publish" {
-  needs = "Release"
+action "Publish to VS Marketplace" {
+  needs = "Generate Release"
   uses = "./.github/actions/publish"
   secrets = ["VSCE_TOKEN", "GITHUB_TOKEN"]
 }
