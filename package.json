@@ -12,7 +12,7 @@
   "scripts": {
     "build": "node src/index.js",
     "clean": "rm -rf themes",
-    "cp:static": "cp README.md themes && cp LICENSE themes && cp -R static themes",
+    "cp:static": "cp README.md themes && cp LICENSE themes && cp CHANGELOG.md themes && cp -R static themes",
     "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build",
     "release": "release-it minor --ci",
     "test:check-code": "yarn test:lint && yarn test:flow",
