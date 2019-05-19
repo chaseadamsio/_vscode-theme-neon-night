@@ -21,6 +21,7 @@
     "vscode:publish": "cd themes && vsce"
   },
   "dependencies": {
+    "auto-changelog": "^1.13.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
