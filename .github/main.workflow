@@ -7,14 +7,14 @@ action "Check Code" {
     uses ="./.github/actions/check"
 }
 
-action "Tag" {
+action "Master" {
   needs = "Check Code"
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
 
 action "Release" {
-  needs = "Tag"
+  needs = "Master"
   uses = "./.github/actions/release"
   secrets = ["GITHUB_TOKEN"]
 }
