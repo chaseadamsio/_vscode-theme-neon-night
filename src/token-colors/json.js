@@ -30,7 +30,7 @@ const json = (palette /*: Palette */) => [
       `source.json string.quoted.double punctuation`
     ],
     settings: {
-      foreground: palette.green
+      foreground: palette.cyan
     }
   }
 ];

@@ -6,7 +6,7 @@ const colors = {
   white: `#C7C8FF`,
   white77: `#C7C8FF77`,
   white33: `#C7C8FF33`,
-  cyan: `#8CE8ff`,
+  cyan: `#0adeff`,
   blue: `#69B4F9`,
   blue77: `#69B4F977`,
   blue33: `#69B4F933`,
