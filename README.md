@@ -56,10 +56,11 @@ You can find the Neon Night theme in the [Visual Studio Code Marketplace](https:
 Run the `develop:init` task:
 
 ```sh
-yarn develop:init
+
+yarn prepublish && yarn develop:init
 ```
 
-This will create a symlink in the VS Code extensions and build the theme for the first time. Afte running this, follow the Installation instructions to load the theme.
+This will create a symlink in the VS Code extensions and build the theme for the first time. After running this, follow the Installation instructions to load the theme.
 
 ## Publishing
 
