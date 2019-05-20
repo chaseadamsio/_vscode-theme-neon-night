@@ -13,7 +13,7 @@
     "build": "node src/index.js",
     "clean": "rm -rf themes",
     "cp:static": "cp README.md themes && cp LICENSE themes && cp CHANGELOG.md themes && cp -R static themes",
-    "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night) && yarn build",
+    "develop:init": "(test -L $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night@develop || ln -s $PWD/themes $HOME/.vscode/extensions/chaseadamsio.vscode-theme-neon-night@develop) && yarn build",
     "release": "release-it minor --ci",
     "test:check-code": "yarn test:lint && yarn test:flow",
     "test:flow": "flow check",
