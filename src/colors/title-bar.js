@@ -8,7 +8,8 @@ import type {Palette} from '../types'
 const titleBar = (palette /*: Palette */) => ({
   "titleBar.activeBackground": palette.black,
   "titleBar.activeForeground": palette.white,
-  "titleBar.inactiveForeground": palette.white77
+  "titleBar.inactiveForeground": palette.white33,
+  "titleBar.inactiveBackground": palette.black
 });
 
 module.exports = titleBar;
