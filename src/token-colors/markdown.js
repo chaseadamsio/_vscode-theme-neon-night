@@ -1,10 +1,13 @@
 // @flow
 
 /* ::
-import type {Palette} from '../types'
+import type {Palette, FontStyles} from '../types'
 */
 
-const markdown = (palette /*: Palette */) => [
+const markdown = (
+  palette /*: Palette */,
+  fontStyleEnabled /*: FontStyles */
+) => [
   {
     name: `Markdown - Plain`,
     scope: [`text.html.markdown`, `punctuation.definition.list_item.markdown`],
@@ -20,7 +23,7 @@ const markdown = (palette /*: Palette */) => [
     ],
     settings: {
       foreground: palette.blue,
-      fontStyle: `bold`
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`
     }
   },
   {
@@ -122,7 +125,7 @@ const markdown = (palette /*: Palette */) => [
     name: `Markdown - Separator`,
     scope: [`text.html markdown meta.separator`],
     settings: {
-      fontStyle: `bold`,
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`,
       foreground: palette.white
     }
   }

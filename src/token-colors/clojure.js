@@ -1,10 +1,13 @@
 // @flow
 
 /* ::
-import type {Palette} from '../types'
+import type {Palette, FontStyles} from '../types'
 */
 
-const clojure = (palette /*: Palette */) => [
+const clojure = (
+  palette /*: Palette */,
+  fontStyleEnabled /*: FontStyles */
+) => [
   {
     name: `Clojure - Constant Keyword`,
     scope: `source.clojure constant.keyword`,
@@ -24,7 +27,7 @@ const clojure = (palette /*: Palette */) => [
     scope: `source.clojure meta.symbol`,
     settings: {
       foreground: palette.cyan,
-      fontStyle: `italic`
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`
     }
   }
 ];

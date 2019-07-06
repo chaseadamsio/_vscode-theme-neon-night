@@ -1,15 +1,15 @@
 // @flow
 
 /* ::
-import type {Palette} from '../types'
+import type {Palette, FontStyles} from '../types'
 */
 
-const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
+const base = (palette /*: Palette */, fontStyleEnabled /*: FontStyles */) => [
   {
     name: `Base - Comment`,
     scope: [`comment`, `punctuation.definition.comment`],
     settings: {
-      fontStyle: fontStyleEnabled ? `italic` : `normal`,
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`,
       foreground: palette.magenta77
     }
   },
@@ -25,7 +25,7 @@ const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
     scope: [`entity.name.function`],
     settings: {
       foreground: palette.white,
-      fontStyle: fontStyleEnabled ? `italic` : `normal`
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`
     }
   },
   {
@@ -39,7 +39,7 @@ const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
     name: `Base - Boolean`,
     scope: `constant.language.boolean`,
     settings: {
-      fontStyle: fontStyleEnabled ? `bold` : `normal`,
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`,
       foreground: palette.white
     }
   },
@@ -61,7 +61,7 @@ const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
     name: `Base - Storage`,
     scope: [`storage.type`, `storage.modifier`],
     settings: {
-      fontStyle: fontStyleEnabled ? `italic` : `normal`,
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`,
       foreground: palette.magenta
     }
   },
@@ -82,7 +82,7 @@ const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
       `keyword.control`
     ],
     settings: {
-      fontStyle: fontStyleEnabled ? `italic` : `normal`,
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`,
       foreground: palette.magenta
     }
   },
@@ -111,7 +111,7 @@ const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
     name: `Base - Language Variable`,
     scope: [`variable.language`],
     settings: {
-      fontStyle: fontStyleEnabled ? `bold` : `normal`,
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`,
       foreground: palette.white
     }
   },
@@ -119,7 +119,7 @@ const base = (palette /*: Palette */, fontStyleEnabled /*: boolean */) => [
     name: `Base - Attributes`,
     scope: [`entity.other.attribute-name`],
     settings: {
-      fontStyle: fontStyleEnabled ? `italic` : `normal`,
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`,
       foreground: palette.magenta
     }
   },

@@ -1,10 +1,10 @@
 // @flow
 
 /* ::
-import type {Palette} from '../types'
+import type {Palette, FontStyles} from '../types'
 */
 
-const json = (palette /*: Palette */) => [
+const json = (palette /*: Palette */, fontStyleEnabled /*: FontStyles */) => [
   {
     name: `JSON - Property Name`,
     scope: [
@@ -20,7 +20,7 @@ const json = (palette /*: Palette */) => [
     scope: `source.json constant.language`,
     settings: {
       foreground: palette.white,
-      fontStyle: `bold`
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`
     }
   },
   {
