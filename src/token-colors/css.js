@@ -1,10 +1,10 @@
 // @flow
 
 /* ::
-import type {Palette} from '../types'
+import type {Palette, FontStyles} from '../types'
 */
 
-const css = (palette /*: Palette */) => [
+const css = (palette /*: Palette */, fontStyleEnabled /*: FontStyles */) => [
   {
     name: `CSS - ID`,
     scope: [
@@ -17,7 +17,7 @@ const css = (palette /*: Palette */) => [
     ],
     settings: {
       foreground: palette.magenta,
-      fontStyle: `italic`
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`
     }
   },
   {

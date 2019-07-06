@@ -1,10 +1,13 @@
 // @flow
 
 /* ::
-import type {Palette} from '../types'
+import type {Palette, FontStyles} from '../types'
 */
 
-const javascript = (palette /*: Palette */) => [
+const javascript = (
+  palette /*: Palette */,
+  fontStyleEnabled /*: FontStyles */
+) => [
   {
     name: `JS - Import/Require`,
     scope: `source.js keyword.control.module`,
@@ -24,7 +27,7 @@ const javascript = (palette /*: Palette */) => [
     scope: `source.js string.unquoted`,
     settings: {
       foreground: palette.white,
-      fontStyle: `italic`
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`
     }
   },
   {
@@ -50,7 +53,7 @@ const javascript = (palette /*: Palette */) => [
     scope: `source.js support.type.class.flowtype`,
     settings: {
       foreground: palette.white,
-      fontStyle: `bold`
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`
     }
   },
   {
@@ -62,7 +65,7 @@ const javascript = (palette /*: Palette */) => [
     ],
     settings: {
       foreground: palette.white,
-      fontStyle: `bold`
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`
     }
   },
   {
@@ -70,7 +73,7 @@ const javascript = (palette /*: Palette */) => [
     scope: `source.js variable.language`,
     settings: {
       foreground: palette.white,
-      fontStyle: `bold`
+      fontStyle: fontStyleEnabled.bold ? `bold` : `normal`
     }
   },
   {
@@ -92,7 +95,7 @@ const javascript = (palette /*: Palette */) => [
     scope: `source.js entity.other.attribute-name.jsx`,
     settings: {
       foreground: palette.blue,
-      fontStyle: `italic`
+      fontStyle: fontStyleEnabled.italic ? `italic` : `normal`
     }
   }
 ];

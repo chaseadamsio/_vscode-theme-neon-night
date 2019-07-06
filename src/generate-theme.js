@@ -39,15 +39,15 @@ const generateTheme = (
   },
   tokenColors: [
     ...require(`./token-colors/base`)(palette, fontStyleEnabled),
-    ...require(`./token-colors/clojure`)(palette),
-    ...require(`./token-colors/css`)(palette),
-    ...require(`./token-colors/docker`)(palette),
+    ...require(`./token-colors/clojure`)(palette, fontStyleEnabled),
+    ...require(`./token-colors/css`)(palette, fontStyleEnabled),
+    ...require(`./token-colors/docker`)(palette, fontStyleEnabled),
     ...require(`./token-colors/go`)(palette),
-    ...require(`./token-colors/html`)(palette),
-    ...require(`./token-colors/javascript`)(palette),
-    ...require(`./token-colors/json`)(palette),
+    ...require(`./token-colors/html`)(palette, fontStyleEnabled),
+    ...require(`./token-colors/javascript`)(palette, fontStyleEnabled),
+    ...require(`./token-colors/json`)(palette, fontStyleEnabled),
     ...require(`./token-colors/makefile`)(palette),
-    ...require(`./token-colors/markdown`)(palette),
+    ...require(`./token-colors/markdown`)(palette, fontStyleEnabled),
     ...require(`./token-colors/yaml`)(palette)
   ]
 });

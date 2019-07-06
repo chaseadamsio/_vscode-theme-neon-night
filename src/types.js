@@ -26,6 +26,11 @@ export type Palette = {|
 
 export type Theme = {|
   displayName: string,
-  fontStyleEnabled: boolean,
+  fontStyleEnabled: FontStyles,
   palette: Palette
+|};
+
+export type FontStyles = {|
+  italic: boolean,
+  bold: boolean
 |};
