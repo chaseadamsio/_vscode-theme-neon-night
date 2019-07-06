@@ -36,17 +36,17 @@ module.exports = themeInfo => ({
         path: `./neon-night-theme.json`
       },
       {
-        label: `Neon Night - No Bold`,
+        label: `Neon Night (No Bold)`,
         uiTheme: `vs-dark`,
         path: `./neon-night-no-bold-theme.json`
       },
       {
-        label: `Neon Night - No Italic`,
+        label: `Neon Night (No Italic)`,
         uiTheme: `vs-dark`,
         path: `./neon-night-no-italic-theme.json`
       },
       {
-        label: `Neon Night - No Font Styles`,
+        label: `Neon Night - (No Font Styles)`,
         uiTheme: `vs-dark`,
         path: `./neon-night-no-style-theme.json`
       }

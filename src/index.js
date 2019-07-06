@@ -7,12 +7,12 @@ const pkgJSON = require(`./generate-pkg-json`);
 const palette = require(`./palette`);
 const themeInfo = {
   name: `neon-night`,
-  displayName: `Neon Night`,
-  variant: ``
+  displayName: `Neon Night`
 };
 
 const themePath = (variant /*: ?string */) => {
   const name = variant ? `${themeInfo.name}-${variant}` : themeInfo.name;
+  console.log(`writing file ${name}-theme.json`);
   return path.resolve(__dirname, `..`, `themes`, `${name}-theme.json`);
 };
 
@@ -41,25 +41,25 @@ const main = async function(themePath, themeInfo, fontStyleEnabled) {
 };
 
 // default
-main(themePath, themeInfo, { italic: true, bold: true });
+main(themePath, { ...themeInfo, variant: `` }, { italic: true, bold: true });
 
 // no font style
 main(
   themePath,
-  { variant: `no-style`, ...themeInfo },
+  { ...themeInfo, variant: `no-style` },
   { italic: false, bold: false }
 );
 
 // no bold style
 main(
   themePath,
-  { variant: `no-bold`, ...themeInfo },
+  { ...themeInfo, variant: `no-bold` },
   { italic: true, bold: false }
 );
 
 // no italic style
 main(
   themePath,
-  { variant: `no-italic`, ...themeInfo },
+  { ...themeInfo, variant: `no-italic` },
   { italic: false, bold: true }
 );
