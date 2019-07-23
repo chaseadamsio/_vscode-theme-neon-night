@@ -32,6 +32,7 @@ const generateTheme = (
     ...require(`./colors/menu-bar`)(palette),
     ...require(`./colors/notification`)(palette),
     ...require(`./colors/quick-picker`)(palette),
+    ...require(`./colors/quick-input`)(palette),
     ...require(`./colors/integrated-terminal`)(palette),
     ...require(`./colors/debug`)(palette),
     ...require(`./colors/git`)(palette),
