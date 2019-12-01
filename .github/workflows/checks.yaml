@@ -1,10 +1,13 @@
-name: "Check, Build, Release & Publish"
-on: [push]
+name: "Check"
+on: 
+  push:
+    branches-ignore:
+      - master # because release also runs this check
 
 jobs:
   build:
     runs-on: ubuntu-latest  
-    name: "Check, Build, Release & Publish"
+    name: "Check"
     steps:
       - name: "Get Code?"
         uses: actions/checkout@v1
