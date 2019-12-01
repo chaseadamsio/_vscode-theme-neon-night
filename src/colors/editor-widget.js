@@ -11,7 +11,7 @@ const editorWidget = (palette /*: Palette */) => ({
   "editorSuggestWidget.background": palette.black,
   "editorSuggestWidget.foreground": palette.white,
   "editorSuggestWidget.highlightForeground": palette.magenta,
-  "editorSuggestWidget.selectedBackground": palette.blackout,
+  "editorSuggestWidget.selectedBackground": palette.blackest,
   "editorHoverWidget.background": palette.blackest,
   // editor marker navigation
   "editorMarkerNavigation.background": palette.black,
