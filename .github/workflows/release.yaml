@@ -9,16 +9,16 @@ jobs:
     runs-on: ubuntu-latest  
     name: "Check, Build, Release & Publish"
     steps:
-      - name: "Get Code?"
+      - name: "Get Code"
         uses: actions/checkout@v1
       - name: "Check Code"
         uses: ./.github/actions/check
       - name: "Generate Release"
         uses: ./.github/actions/release
-        with: 
+        env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Publish to VS Marketplace"
         uses: ./.github/actions/publish
-        with:
+        env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
