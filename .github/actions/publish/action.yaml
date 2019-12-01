@@ -1,0 +1,6 @@
+name: "Publish to VSCE"
+description: "Checks code"
+runs: 
+  using: "docker"
+  image: "Dockerfile"
+  entrypiont: "./entrypoint.sh"
