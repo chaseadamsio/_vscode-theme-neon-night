@@ -8,6 +8,7 @@ import type {Palette} from '../types'
 const baseColors = (palette /*: Palette */) => ({
   foreground: palette.white,
   focusBorder: palette.magenta77,
+  contrastBorder: palette.magenta77,
   "widget.shadow": palette.black,
   "selection.background": palette.magenta33,
   descriptionForeground: palette.white,
