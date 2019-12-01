@@ -1,8 +1,5 @@
 name: "Check"
-on: 
-  push:
-    branches-ignore:
-      - master # because release also runs this check
+on: [push]
 
 jobs:
   build:
