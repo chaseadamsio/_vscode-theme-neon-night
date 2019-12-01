@@ -15,10 +15,10 @@ jobs:
         uses: ./.github/actions/check
       - name: "Generate Release"
         uses: ./.github/actions/release
-        with: 
+        env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Publish to VS Marketplace"
         uses: ./.github/actions/publish
-        with:
+        env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
