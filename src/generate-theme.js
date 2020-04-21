@@ -36,10 +36,11 @@ const generateTheme = (
     ...require(`./colors/integrated-terminal`)(palette),
     ...require(`./colors/debug`)(palette),
     ...require(`./colors/git`)(palette),
-    ...require(`./colors/breadcrumbs`)(palette)
+    ...require(`./colors/breadcrumbs`)(palette),
   },
   tokenColors: [
     ...require(`./token-colors/base`)(palette, fontStyleEnabled),
+    ...require(`./token-colors/asciidoc`)(palette, fontStyleEnabled),
     ...require(`./token-colors/clojure`)(palette, fontStyleEnabled),
     ...require(`./token-colors/css`)(palette, fontStyleEnabled),
     ...require(`./token-colors/docker`)(palette, fontStyleEnabled),
@@ -49,8 +50,8 @@ const generateTheme = (
     ...require(`./token-colors/json`)(palette, fontStyleEnabled),
     ...require(`./token-colors/makefile`)(palette),
     ...require(`./token-colors/markdown`)(palette, fontStyleEnabled),
-    ...require(`./token-colors/yaml`)(palette)
-  ]
+    ...require(`./token-colors/yaml`)(palette),
+  ],
 });
 
 module.exports = generateTheme;
