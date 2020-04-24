@@ -3,4 +3,3 @@ description: "Create Release"
 runs:
   using: "docker"
   image: "Dockerfile"
-  entrypoint: "./entrypoint.sh"
