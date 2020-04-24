@@ -1,6 +1,5 @@
 name: "Check"
 description: "Checks code"
-runs: 
+runs:
   using: "docker"
   image: "Dockerfile"
-  entrypiont: "./entrypoint.sh"

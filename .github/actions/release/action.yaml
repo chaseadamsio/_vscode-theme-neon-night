@@ -1,6 +1,5 @@
 name: "Create Release"
 description: "Create Release"
-runs: 
+runs:
   using: "docker"
   image: "Dockerfile"
-  entrypiont: "./entrypoint.sh"
