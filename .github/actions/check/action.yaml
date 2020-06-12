@@ -1,5 +1,0 @@
-name: "Check"
-description: "Checks code"
-runs:
-  using: "docker"
-  image: "Dockerfile"

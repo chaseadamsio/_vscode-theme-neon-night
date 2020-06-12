@@ -1,5 +1,0 @@
-name: "Create Release"
-description: "Create Release"
-runs:
-  using: "docker"
-  image: "Dockerfile"
