@@ -5,19 +5,19 @@
 
 > A dark theme for VS Code
 
-![Full Preview](static/preview/full-preview.png)
+![Full Preview](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/full-preview.png)
 
 | JavaScript | React | Vue |
 |:---:|:---:|:---:|
-| ![JavaScript Screen](static/preview/javascript.png) |![React Screen](static/preview/react.png) | ![Vue Screen](static/preview/vue.png) |
+| ![JavaScript Screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/javascript.png) |![React Screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/react.png) | ![Vue Screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/vue.png) |
 
 | Go | Dockerfile | HTML |
 |:---:|:---:|:---:|
-| ![Go Screen](static/preview/go.png) | ![Dockerfile screen](static/preview/docker.png) | ![HTML Screen](static/preview/html.png) |
+| ![Go Screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/go.png) | ![Dockerfile screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/docker.png) | ![HTML Screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/html.png) |
 
 | JSON | TOML | YAML |
 |:---:|:---:|:---:|
-| ![JSON Screen](static/preview/json.png) | ![TOML Screen](static/preview/toml.png) | ![YAML screen](static/preview/yaml.png)
+| ![JSON Screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/json.png) | ![TOML Screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/toml.png) | ![YAML screen](https://github.com/chaseadamsio/vscode-theme-neon-night/blob/mainline/static/preview/yaml.png)
 
 
 ## Getting Started
